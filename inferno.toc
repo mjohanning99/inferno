@@ -1,5 +1,7 @@
 \babel@toc {english}{}
-\contentsline {chapter}{Introduction}{}% 
-\contentsline {part}{Book I}{i}% 
-\contentsline {chapter}{From the Deepest Depths of Hell}{i}% 
-\contentsline {chapter}{Resurrecting the Devil}{iii}% 
+\contentsline {chapter}{Introduction}{1}% 
+\contentsline {part}{Book I}{ii}% 
+\contentsline {chapter}{From the Deepest Depths of Hell}{iii}% 
+\contentsline {chapter}{Resurrecting the Devil}{v}% 
+\contentsline {part}{Book II}{xii}% 
+\contentsline {chapter}{Commencing the Descent}{xiii}% 

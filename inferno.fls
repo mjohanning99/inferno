@@ -65,6 +65,8 @@ INPUT /usr/share/texmf-dist/tex/latex/lm/lmodern.sty
 INPUT /usr/share/texmf-dist/tex/latex/lm/lmodern.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/afterpage.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/afterpage.sty
+INPUT /usr/share/texmf-dist/tex/latex/nonumonpart/nonumonpart.sty
+INPUT /usr/share/texmf-dist/tex/latex/nonumonpart/nonumonpart.sty
 OUTPUT inferno.idx
 INPUT inferno.aux
 INPUT inferno.aux
