@@ -1,0 +1,116 @@
+\documentclass[a4paper,12pt]{report}
+\special{papersize=210mm,297mm}
+
+\usepackage{fancyhdr}
+\usepackage[english]{babel} 
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{wrapfig} % For wrapping text around images
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[utf8x]{inputenc}
+\usepackage{epigraph}
+\makeindex
+
+\begin{document}
+
+\pagenumbering{gobble} %No page numbers for the front matter
+%\title{\textbf{Adventures in Trying the Inferno Operating System} \\ \textit{Observations and Notes}}
+
+\title{%
+  Adventures in Trying the Inferno Operating System \\
+  \textit{Observations and Notes}
+}
+\author{By Marvin Johanning}
+\date{April 2020}
+\maketitle
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+% Header and Footer settings
+\setlength{\headheight}{15.2pt}
+
+\chapter*{Introduction}
+  \markboth{Introduction}{Introduction}
+  \addcontentsline{toc}{chapter}{Introduction}
+In the following document you will be presented with some information regarding the Inferno operating system created by Bell Labs in the mid 1990s. Its name and somewhat mysterious aura led me to write it in a style akin to the one that can be seen in older books, such as those from the early 20th or late 19th centuries. This applies to both the chapter headings, as well as the text itself.
+
+I believe that this may also make reading it somewhat more enjoyable than the otherwise rather dryly written literature available on this subject and perhaps help those who are interested in this operating system — and that may possibly not know much about Linux itself either — can have an interestingly written introduction.
+
+It is however to be noted that this is not meant to be a complete introduction to the operating system and its underlying structure; it is merely intended to be a quick overview of the operating system, how to install it and what you can do with it.
+\pagebreak
+
+\part*{Book I}
+  \markboth{Book I}{Book I}
+  \addcontentsline{toc}{part}{Book I}
+
+\pagenumbering{roman}
+\chapter*{From the Deepest Depths of Hell}
+  \markboth{From the Deepest Depths of Hell}{From the Deepest Depths of Hell}
+  \addcontentsline{toc}{chapter}{From the Deepest Depths of Hell}
+
+\epigraph{``Long is the way and hard, that out of Hell leads up to light.''}{\textit{John Milton\\Paradise Lost, Book II}}
+
+I must admit, it was largely the rather intriguing name of this operating system that made me want to know more about it and do more research on it. I had come across it on one of my quite common internet \textit{trips} wherein I simply hop from one hyperlink to the next, trying to discover something interesting — or, perhaps more accurately, something obscure. 
+Frequently these \textit{trips} end unsatisfactorily; yet this time, luck seems to have been on my side, for I was finally able to uncover something interesting — why, even mysterious. I am of course speaking of the \textit{Inferno operating system} created by the renowned Bell Labs in 1996. 
+
+They had previously worked on \textit{Plan 9 from Bell Labs} — why they felt the need to add the ``from Bell Labs'' portion is, unfortunately, beyond me — which, just as Inferno, has largely fallen into obscurity. It is now just to be found in the dark and long forgotten and abandoned corners of the web that seem to be frozen in time, containing information and discussions from days long past; that are held aloft simply by someone continuing to pay for server bills. It's a pity, really, how large amounts of information can simply vanish from the world by someone — perhaps quite literally — pulling the plug.
+
+Plan 9 — as I will be calling it henceforth, ignoring the \textit{from Bell Labs} portion of its name, for I trust you will know that I am indeed referring to the operating system and not the movie — was actually what I had found before Inferno.
+
+I am unsure of the precise circumstances that let me to its discovery, but I distinctly remember discovering a page filled with interesting documents on a wide range of topics which can be reached under the following address: \texttt{http://doc.cat-v.org/}. 
+This fascinating archive of old documents contains a myriad of interesting tidbits on both Plan 9 and Inferno — and other topics as well. 
+
+I thus decided to start reading some of the documents available on Plan 9 and was quickly intrigued — for seeing an operating system whose creators are the same ones that created the beauty that is UNIX was truly remarkable; why had I not heard of it previously?
+
+Yet to my utter dismay, it was quickly revealed that it seems to have been long forgotten and abandoned — but a mere relic of the past — and that one can count its user base on two hands; and while there appears to remain a small number of people that continue using it, its ultimate failure was being unable to prove much better than what it strove to replace — UNIX itself.
+
+For they realised their old operating system had become \textit{too} old, even by the standards of the mid-1980s. They wished to create a system — from scratch — that would encompass these new-fangled ideas, such as graphical user interfaces; a system that did not have these features hapharzardly stiched on — as a surgeon would try to fix a severly wounded fellow — but one that was built with them in mind; a system that would abide by UNIX' philosophy of everything being a file, but one that was more adapt to modern — at least, for the time — standards.
+
+But alas, as the passage of time has revealed, their efforts have been in vain; for ask any fellow, even those who are learned and know of computers, and chances are high he will not know of their failed efforts to create a superior UNIX.\@
+
+Yet this is not a tale of Plan 9, it is one of its successor Inferno. Having learnt from their former mistakes with Plan 9, they strove to create a superior Plan 9; one that would be used in network environments; one that was portable and lightweight and could easily run on a myriad of different types of machine.
+Yet tragically, even Inferno seems to have gone under — perhaps even into hell itself.
+
+But fret not! While abandoned by Bell Labs long ago — what vile traitors they are! —, it has since been acquired by an American company, who have released the latest version in 2015. Let us unveil this long forgotten gem. \pagebreak
+
+\chapter*{Resurrecting the Devil}
+  \markboth{Resurrecting the Devil}{Resurrecting the Devil}
+  \addcontentsline{toc}{chapter}{Resurrecting the Devil}
+
+  \epigraph{``Soon you will be where your own eyes will see the source and cause and give you their own answer to the mystery.''}{\textit{Dante Alighieri\\Inferno}}
+
+  The first question that arises is whence one can obtain a copy of this operating system and it seems the official source code is currently available on GitBucket; but one may also download it from the current maintainers' website: http://www.vitanuova.com/index.html. This appearance of this website, too, reminds one of those long forgotten sites filled with flashing GIFs and strangely formatted text from the late 1990s or early 2000s. Yet it appears that it has yet to be abandoned — why, there seem to exist discussion forums dedicated to Inferno still! What a site to behold they are; and though posted on only occasionally, it is a pleasure to see discussions being conducted about Inferno — there may be hope still! But let us continue with our journey down into the depths of hell.
+
+  Obtaining the latest version of this operating system is a task swiftly completely; indeed, it is a mere 70 megabyte large archive — 'tis truly devilish sorcery worthy of the name  ``Inferno''.
+
+  Yet already we stumble across something strange; something unusual; something you shan't see with an operating system of current times — why are there different downloads for different operating systems. Surely, you cannot imply it is to be run ontop of another operating system? Why yes, you can.
+
+  Indeed, something I had negelected to mention previously was the fact Inferno is no ordinary operating system — no, it is meant to be installed ontop of the one already running on one's machine; and whilst it is indeed possible to install it onto bare hardware, only a madman would do such a thing. Really, its main intent was to be a complentary system to Plan 9 and one was meant to install it ontop of Plan 9 to have a more complete experience.
+
+  Thus choose wisely; do not download the wrong archive, for it may not work. As I am running Linux, I chose their archive meant to be used with Unix-like systems, of which Linux is one. It is, as previously mentioned, an archive and must thus be extracted, a task easily accomplished with Linux' helpful \texttt{tar} command; one must simply type \texttt{tar xf} followed by the name of the archive and it is extracted into its own directory.
+
+  Upon entering the directory so thoughtfully created by the \texttt{tar} command, one is greeted by files upon files and folders upon folders. Indeed, it may be slightly disorienting — even offputting — to those uninitiated to Unix-like systems; but, as one is swift to notice, there are two helpful documents to guide us in our installation journey: a \texttt{README.md} and an \texttt{INSTALL} document. Therein you will find a lot of information that will be imperative for installing Inferno; thus, let us first take a look at the README.
+
+  Inside the README one finds general information regarding the operating system, detailing its creators and purpose. Additionally it highlights what makes it so interesting — yet also similar to Unix: —
+
+  \begin{quote}
+    The use of a high-level language and virtual machine is sensible but mundane. The interesting thing is the
+    system’s representation of services and resources. They are represented in a file-like name hiearchy.
+    Programs access them using only the file operations open, read/write, and close. The ‘files’ may of course
+    represent stored data, but may also be devices, network and protocol interfaces, dynamic data sources, and
+    services.
+  \end{quote}
+
+  It is truly remarkable; a system whereon everything is a file — something that can readily be read and edited — is revolutionary and yet it is simple — why, even mundane! A mere child could think of it. It is, beyond any doubt, an elegant and ingenious idea.
+
+  But withal, this helped but little in embarking onto our journey into Inferno; and whilst it was indeed interesting to be given some information regarding its background, we are none the wiser. Thus, let us read the INSTALL file, wherein we shall — hopefully — find our answers; and indeed we do!
+  For therein we are presented with actual instructions, but as they may appear cryptic to those who have never — or perhaps only rarely — used a Unix-based operating system, I shall try to elaborate on their instructions; for they merely appear cryptic — or, perchance, even challenging — and are, in actuality, quaint and mundane.
+
+  It is, however, to be noted that my instructions henceforth will work only on Linux x86; should you wish to be presented with instructions regarding other systems — systems whose name should not be spoken, for they are vicious and vile, forged somewhere far below hell itself; in a place Be\"{e}lzebub himself does not dare to enter — you may cease your reading here, for you may not find the information you desire. The following chapter is akin to a recipe from a cook book; hence follow the instructions with care, or your ``meal'' may turn out wretched and ugly.
+
+  One must first define the \textit{root} of the installation; this may sound somewhat strange, yet in actuality one is simply required to aid Inferno in knowing where on your system it is located — it cannot know on its own and assumes it is located in \texttt{/usr/local/inferno}. Hence, should you not wish Inferno to be installed there, you must alter the \texttt{mkconfig} file; therein you can modify the \texttt{ROOT} variable to point to your Inferno directory.
+
+\end{document}
