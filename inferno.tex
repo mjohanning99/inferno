@@ -10,18 +10,21 @@
 \usepackage{amsmath}
 \usepackage[utf8x]{inputenc}
 \usepackage{epigraph}
+\usepackage{lmodern}
+\usepackage{afterpage}
 \makeindex
+
+\newlength\longest
 
 \begin{document}
 
-\pagenumbering{gobble} %No page numbers for the front matter
-%\title{\textbf{Adventures in Trying the Inferno Operating System} \\ \textit{Observations and Notes}}
+\pagenumbering{gobble} 
 
 \title{%
   Adventures in Trying the Inferno Operating System \\
   \textit{Observations and Notes}
 }
-\author{By Marvin Johanning}
+\author{By Marvin Johanning\\(info@)marvinjohanning.de}
 \date{April 2020}
 \maketitle
 \pagebreak
@@ -29,8 +32,7 @@
 \tableofcontents
 \pagebreak
 
-% Header and Footer settings
-\setlength{\headheight}{15.2pt}
+%%%%%%%%%% Introduction %%%%%%%%%%
 
 \chapter*{Introduction}
   \markboth{Introduction}{Introduction}
@@ -40,7 +42,32 @@ In the following document you will be presented with some information regarding 
 I believe that this may also make reading it somewhat more enjoyable than the otherwise rather dryly written literature available on this subject and perhaps help those who are interested in this operating system — and that may possibly not know much about Linux itself either — can have an interestingly written introduction.
 
 It is however to be noted that this is not meant to be a complete introduction to the operating system and its underlying structure; it is merely intended to be a quick overview of the operating system, how to install it and what you can do with it.
+
+I highly encourage to to critisise my work — this is, obviously, without having to result to petty insults and the like — and send me an email with your feedback. It is not unlikely that I have made a mistake — or perhaps even several — over the course of this document and I always like to be corrected if there are factual, grammatical or spelling errors.
 \pagebreak
+
+%%%%%%%%%% Introductory quote %%%%%%%%%%
+
+\clearpage
+\thispagestyle{empty}
+\null\vfill
+\settowidth\longest{\huge\itshape We have persistent objects,}
+\begin{center}
+\parbox{\longest}{%
+  \raggedright{\huge\itshape%
+    We have persistent objects, \\they're called files. \par\bigskip
+  }
+  \raggedleft\Large\MakeUppercase{Ken Thompson}\par%
+}
+\vfill\vfill
+\clearpage\newpage
+\end{center}
+
+%%%%%%%%%% Empty page %%%%%%%%%%
+
+\afterpage{\null\newpage}
+
+%%%%%%%%%% Beginning of text itself %%%%%%%%%%
 
 \part*{Book I}
   \markboth{Book I}{Book I}
@@ -109,8 +136,24 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
   But withal, this helped but little in embarking onto our journey into Inferno; and whilst it was indeed interesting to be given some information regarding its background, we are none the wiser. Thus, let us read the INSTALL file, wherein we shall — hopefully — find our answers; and indeed we do!
   For therein we are presented with actual instructions, but as they may appear cryptic to those who have never — or perhaps only rarely — used a Unix-based operating system, I shall try to elaborate on their instructions; for they merely appear cryptic — or, perchance, even challenging — and are, in actuality, quaint and mundane.
 
-  It is, however, to be noted that my instructions henceforth will work only on Linux x86; should you wish to be presented with instructions regarding other systems — systems whose name should not be spoken, for they are vicious and vile, forged somewhere far below hell itself; in a place Be\"{e}lzebub himself does not dare to enter — you may cease your reading here, for you may not find the information you desire. The following chapter is akin to a recipe from a cook book; hence follow the instructions with care, or your ``meal'' may turn out wretched and ugly.
+  It is, however, to be noted that my instructions henceforth will work only on Linux x86; should you wish to be presented with instructions regarding other systems — systems whose name should not be spoken, for they are vicious and vile, forged somewhere far below hell itself; in a place Be\"{e}lzebub himself does not dare to enter — you may cease your reading here, for you may not find the information you desire. The following chapter is akin to a recipe from a cook book; hence follow the instructions with care, or your ``meal'' may turn out wretched, ugly and inedible.
 
   One must first define the \textit{root} of the installation; this may sound somewhat strange, yet in actuality one is simply required to aid Inferno in knowing where on your system it is located — it cannot know on its own and assumes it is located in \texttt{/usr/local/inferno}. Hence, should you not wish Inferno to be installed there, you must alter the \texttt{mkconfig} file; therein you can modify the \texttt{ROOT} variable to point to your Inferno directory.
+  Yet withal, I would recommend simply using the directory Infenro wishes to be inside of by creating it using \texttt{sudo mkdir /usr/local/inferno} and thereafter copying the contents from the old directory to the new one by typing \texttt{sudo cp -r * /usr/local/inferno}; I have found this to be much more simple. You must then move into this directory by typing \texttt{cd /usr/local/inferno}.
+
+  But be aware! Apart from the \texttt{ROOT} variable, there exist two others, namely \texttt{SYSHOST} and \texttt{OBJTYPE}; it is imperative to modify these so that they match your system, for otherwise your installation will fail — inded, this is akin to letting a scoundrel wreak havoc on your system. Thus — this is, unless you are using one of the aforementioned systems whose names should never be mentioned, for they cause terror and fear far greater than that caused by the devil himself —, pay heed to the values of these two variables, for they ought to be set to \texttt{Linux} and \texttt{386} respectively. The latter should be modified to equal \texttt{arm} should your Linux installation be ARM-based, such as those running on the Raspberry Pi.
+
+  Having completed this task, you will thence be able to execute \texttt{makemk.sh}, a shell script that will spawn the \texttt{mk} executable which shall thenceforth be used for building Inferno itself; a infernal tool for certain, yet one that shall prove invaluable.
+
+  I implore you to act with as much care as you can permit henceforth, for the following commands utilise \texttt{sudo}; an almighty tool whose purpose is to allow you to be the lord of your system; a tool that grants you the permissions to do every conceivable thing on your machine; a tool that is a juxtaposition of both Good and Evil, for it imparts you with the power of achieving your every desire, but it may also destroy what you have created in an instant. Should your machine contain data you believe invaluable, I urge you create a copy of it elsewhere; in a place where Satan cannot touch it.
+
+  Notwithstanding, it must be used, for our machine will not permit us to make changes without it; you may attempt to run \texttt{makemk.sh} without \texttt{sudo}, but you shall be given an error, as one may not make any changes to the system without having been having been granted the appropriate privileges.
+
+  If you deem yourself to be prepared, execute \texttt{sudo ./makemk.sh} whereupon you may be presented with a number of warnings that can, however, be ignored; for if, after a few seconds, you are told that ``mk binary built successfully!'', everything has worked and a binary has been concocted and can thence be found inside \texttt{/usr/local/inferno/Linux/386/bin}.
+
+  But alas, our machine is dim-witted, for running \texttt{mk} does not yield anything; nay, it appears the command does not exist — which is undoubtebly wrong, for its existance can be ascertained by looking at the aforementioned directory. So what is one to do? The machine needs to be told where to find it — and the binaries that shall be brought into existance soon —, which means that we will need to modify the \texttt{PATH} variable.
+
+  The conents of this variable tell our machine where binaries are located and one must thus affix the path to our previously created binary onto the \texttt{PATH} variable.
+  
 
 \end{document}
