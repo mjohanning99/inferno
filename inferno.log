@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.4.17)  25 APR 2020 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.4.17)  25 APR 2020 20:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -344,21 +344,21 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 55.
+LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 58.
  (/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 55.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 58.
  [2
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 70.
+(Font)              <12> on input line 74.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 74.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 70.
+(Font)              <6> on input line 74.
  [3
 
 ] [4
@@ -367,8 +367,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 97.
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 106.
+(Font)              <10.95> on input line 101.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 110.
  (/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -384,7 +384,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ] [12] [13
 
-] (./inferno.aux) ) 
+] [14] (./inferno.aux) ) 
 Here is how much of TeX's memory you used:
  6126 strings out of 492167
  89066 string characters out of 6131558
@@ -394,10 +394,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  46i,6n,45p,833b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on inferno.pdf (19 pages, 196889 bytes).
+Output written on inferno.pdf (20 pages, 201876 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18433 words of extra memory for PDF output out of 20736 (max. 10000000)
 

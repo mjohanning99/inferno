@@ -5,7 +5,7 @@
 \usepackage[english]{babel} 
 \usepackage{microtype}
 \usepackage{graphicx}
-\usepackage{wrapfig} % For wrapping text around images
+\usepackage{wrapfig}
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage[utf8x]{inputenc}
@@ -34,6 +34,7 @@
 \pagebreak
 
 %%%%%%%%%% Introduction %%%%%%%%%%
+
 \pagenumbering{arabic}
 \chapter*{Introduction}
   \markboth{Introduction}{Introduction}
@@ -47,6 +48,8 @@ It is however to be noted that this is not meant to be a complete introduction t
 I highly encourage to to critisise my work — this is, obviously, without having to result to petty insults and the like — and send me an email with your feedback. It is not unlikely that I have made a mistake — or perhaps even several — over the course of this document and I always like to be corrected if there are factual, grammatical or spelling errors.
 \pagebreak
 
+%%%%%%%%%% Copyright %%%%%%%%%%
+
 \chapter*{Copyright}
   \markboth{Copyright}{Copyright}
   \addcontentsline{toc}{chapter}{Copyright}
@@ -55,6 +58,7 @@ I highly encourage to to critisise my work — this is, obviously, without havin
 © 2020 Marvin Johanning
 
 Adventures in Trying the Inferno Operating System: Observations and Notes is made available under the Creative Commons Attribution-\\NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
 %%%%%%%%%% Introductory quote %%%%%%%%%%
 
 \clearpage
@@ -123,7 +127,7 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
   \markboth{Resurrecting the Devil}{Resurrecting the Devil}
   \addcontentsline{toc}{chapter}{Resurrecting the Devil}
 
-  \epigraph{``Soon you will be where your own eyes will see the source and cause and give you their own answer to the mystery.''}{\textit{Dante Alighieri\\Inferno}}
+  \epigraph{``Soon you will be where your own eyes will see the source and cause and give you their own answer to the mystery.''}{\textit{Dante Alighieri\\The Divine Comendy, Inferno}}
 
   The first question that arises is whence one can obtain a copy of this operating system and it seems the official source code is currently available on GitBucket; but one may also download it from the current maintainers' website: http://www.vitanuova.com/index.html. This appearance of this website, too, reminds one of those long forgotten sites filled with flashing GIFs and strangely formatted text from the late 1990s or early 2000s. Yet it appears that it has yet to be abandoned — why, there seem to exist discussion forums dedicated to Inferno still! What a site to behold they are; and though posted on only occasionally, it is a pleasure to see discussions being conducted about Inferno — there may be hope still! But let us continue with our journey down into the depths of hell.
 
@@ -169,7 +173,7 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
 
   But alas, our machine is dim-witted, for running \texttt{mk} does not yield anything; nay, it appears the command does not exist — which is undoubtebly wrong, for its existance can be ascertained by looking at the aforementioned directory. So what is one to do? The machine needs to be told where to find it — and the binaries that shall be brought into existance soon —, which means that we will need to modify the \texttt{PATH} variable.
 
-  The conents of this variable tell our machine where binaries are located and one must thus affix the path to our previously created binary onto the \texttt{PATH} variable, a task swiftly accomplished; but first it is imperative to know what Shell is currently being used. This is achived by typing \texttt{echo \$SHELL} into one's terminal, which, in my case, yields \texttt{/usr/bin/zsh}, for I use Zsh; on your system, a likely candidate will be \texttt{/usr/bin/bash}, since the Bourne Shell, as it is called, is one of the most prominent ones in use today.
+  The contents of this variable tell our machine where binaries are located and one must thus affix the path to our previously created binary onto the \texttt{PATH} variable, a task swiftly accomplished; but first it is imperative to know what Shell is currently being used. This is achived by typing \texttt{echo \$SHELL} into one's terminal, which, in my case, yields \texttt{/usr/bin/zsh}, for I use Zsh; on your system, a likely candidate will be \texttt{/usr/bin/bash}, since the Bourne Shell, as it is called, is one of the most prominent ones in use today.
 
   Nevertheless, one needs to add the following line to one's \texttt{~/.bashrc} or \texttt{~/.zshrc} whose purpose it is to inform the machine of our newly built binary's location, so that by typing its name it will be executed: \texttt{export PATH="/usr/local/bin/inferno/Linux/386/bin:\$PATH"}.
 
@@ -205,5 +209,16 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
   \chapter*{Commencing the Descent}
     \markboth{Commencing the Descent}{Commencing the Descent}
     \addcontentsline{toc}{chapter}{Commencing the Descent}
+    
+    \epigraph{\textit{``Lasciate ogne speranza, voi ch'intrate''}}{\textit{Dante Alighieri\\The Divine Comedy}}
+
+    The gates of hell now ajar; the hellish brute now released; as Bucchianeri once said, ``The gates of hell are terrible to behold, are they not?''; but alas, what is to be done now? How are we to enter Inferno? If you remember, we have told our machine where to find its binaries and thus we can simply run Inferno's emulator by typing \texttt{sudo emu} whenceforth one's Bash or Zsh prompt disappears; instead, a simple semi-colon becomes visible — you have trot onto Inferno's ground; you have stepped through the gates of hell, set ajar by our previous actions, and entered Be\"{e}lzebub's realm.
+
+    Certainly, it is to be wondered how this differs from our previous operating system — or from our previous shell for that matter —, for it seems like a mere inferior version of what appeared on our screen before. Indeed, it looks to respond to commands in much the same way as our Linux shell. Typing \texttt{ls} yields the same results as doing so on Bash; have our efforts been in vain? Are we to believe that Inferno is but a mere clone of Unix? Nay, it is but the first impressions that are the cause of this confusion; for you must keep in mind that Inferno was indeed created by the same geniuses that had once, in days long past, created Unix.
+
+    Undoubtebly proud of their previous achievements, they decided to implement — a wise decision, might I add — a large number of the commands that are to be found in Unix-based systems in Inferno. Yet you should not let yourself get fooled, for this is not Unix — 'tis merely hell hiding in plain sight; and whilst it is indeed possible to use Inferno from its shell only, it does provide a window mananger; for, as I hope you remember, they longed to create an operating system that was built with a window manager in mind and not have it be, as was the case with Unix, an afterthought, carelessly plastered onto it years later.
+
+    Its window manager — simply and rather uncreatively titled \texttt{wm} — can be evoked by typing \texttt{wm/wm}.
+
 
 \end{document}
