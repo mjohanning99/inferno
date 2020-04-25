@@ -1,5 +1,6 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Introduction}{1}% 
+\contentsline {chapter}{Copyright}{2}% 
 \contentsline {part}{Book I}{ii}% 
 \contentsline {chapter}{From the Deepest Depths of Hell}{iii}% 
 \contentsline {chapter}{Resurrecting the Devil}{v}% 

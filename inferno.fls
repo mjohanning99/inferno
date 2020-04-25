@@ -133,6 +133,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 OUTPUT inferno.toc
 INPUT /usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT /usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
+INPUT /usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
+INPUT /usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
+INPUT /usr/share/texmf-dist/tex/latex/lm/omslmr.fd
+INPUT /usr/share/texmf-dist/tex/latex/lm/omslmr.fd
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
@@ -140,7 +145,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
@@ -154,10 +158,12 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmtt12.tfm
 INPUT inferno.aux
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
