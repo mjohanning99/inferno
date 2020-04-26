@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex inferno.idx"] 1587809296 "inferno.idx" "inferno.ind" "inferno" 1587897354
-  "inferno.idx" 1587897353 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex inferno.idx"] 1587809296 "inferno.idx" "inferno.ind" "inferno" 1587925785
+  "inferno.idx" 1587925785 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "inferno.ind"
   "inferno.ilg"
-["pdflatex"] 1587897353 "inferno.tex" "inferno.pdf" "inferno" 1587897354
+["pdflatex"] 1587925784 "inferno.tex" "inferno.pdf" "inferno" 1587925785
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1572595918 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1572595918 2327 9d6df24f9c4f7368395224341a95523a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc" 1572595918 2359 de53213020575850c8f8debc35095765 ""
@@ -34,6 +34,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb" 1572595918 119235 f35b44530a1d90eb90fe15d9cba67ea0 ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb" 1572595918 113634 f99c44d58bae0863375faf0e1d74d612 ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb" 1572595918 119752 1bd8d06e4079df624bf59ce3ad7c9aa6 ""
+  "/usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb" 1572595918 122174 a7a08406857c9530a0320a2517f60370 ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb" 1572595918 112593 fda2373ba4420af33949610de4c28fe8 ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb" 1572595918 109265 32320cb6133d4d76bf83e27b5eb4009b ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1572595918 27863 09ce3735688ffde955e72da27c95b61a ""
@@ -85,6 +86,7 @@
   "/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty" 1572595918 12095 5337833c991d80788a43d3ce26bd1c46 ""
   "/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty" 1572595918 7075 2fe3d848bba95f139de11ded085e74aa ""
   "/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1572595918 22417 1d9df1eb66848aa31b18a593099cf45c ""
+  "/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty" 1572592815 48596 2b6a95da931c07a430b1a61904aaa42d ""
   "/usr/share/texmf-dist/tex/latex/tools/afterpage.sty" 1572595918 4086 334b2a0438984acb04f5eb129f52470e ""
   "/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def" 1572592815 7784 086a50b784a20762a031889b73f97126 ""
   "/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def" 1572592815 8033 ee5a06eead35a732222f876800c8f10f ""
@@ -96,13 +98,18 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1587147931 334286 7d54d57af850f32d2e4cd0d3222731c3 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1587147917 8044939 0faf3f72f02e850181fdc04d9dd7f8b0 ""
-  "inferno.aux" 1587897353 655 56fd88b45fb792889a315782b4e710b5 "pdflatex"
+  "brutus.png" 1587924180 20571 ac6b0cd1cb04d0a98c98e694bcfab410 ""
+  "files-menu.png" 1587923771 9174 bbff6cb6950fe0438382e0f3723903fd ""
+  "files.png" 1587922014 11250 53a77a0a544f87834d0659edc2b3d1b9 ""
+  "inferno.aux" 1587925785 1593 4a5bd3d8c4276b0a2b685142bdf3eb8c "pdflatex"
   "inferno.ind" 1587809296 0 d41d8cd98f00b204e9800998ecf8427e "makeindex inferno.idx"
-  "inferno.tex" 1587897351 23428 611cbe7a6a507a56bc57cf0123733226 ""
-  "inferno.toc" 1587897353 351 5ff13bbfe522b846a5c87461d60d0028 "pdflatex"
+  "inferno.tex" 1587925783 32966 18b1c3b3bfa9b14e4aa111b1b7d1488f ""
+  "inferno.toc" 1587925785 493 6ce05e2a63e5ed2abf662f65c025150f "pdflatex"
+  "manual.png" 1587907511 17658 0c3aeb97c233c03994ed84a74e158a1a ""
+  "start_menu.png" 1587906937 8281 675ab68c9c3c7451640997e3f52b5ca2 ""
   (generated)
-  "inferno.aux"
   "inferno.idx"
+  "inferno.aux"
+  "inferno.toc"
   "inferno.log"
   "inferno.pdf"
-  "inferno.toc"

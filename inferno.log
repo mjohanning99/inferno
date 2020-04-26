@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.4.17)  26 APR 2020 12:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.4.17)  26 APR 2020 20:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -217,40 +217,51 @@ Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 \AP@footins=\box32
 ) (/usr/share/texmf-dist/tex/latex/nonumonpart/nonumonpart.sty
 Package: nonumonpart 2011/04/15 v1 nonumonpart.sty by Le TeXnicien de surface
+) (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box33
+\beforetitleunit=\skip61
+\aftertitleunit=\skip62
+\ttl@plus=\dimen119
+\ttl@minus=\dimen120
+\ttl@toksa=\toks29
+\titlewidth=\dimen121
+\titlewidthlast=\dimen122
+\titlewidthfirst=\dimen123
 )
 \@indexfile=\write3
 \openout3 = `inferno.idx'.
 
 
 Writing index file inferno.idx
-\longest=\skip61
+\longest=\skip63
 (./inferno.aux)
 \openout1 = `inferno.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 26.
  (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 20.
+LaTeX Info: Redefining \microtypecontext on input line 26.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 20.
+LaTeX Info: Redefining \showhyphens on input line 26.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -259,16 +270,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 ) (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
-\scratchdimen=\dimen119
-\scratchbox=\box33
+\scratchdimen=\dimen124
+\scratchbox=\box34
 \nofMPsegments=\count110
 \nofMParguments=\count111
-\everyMPshowfont=\toks29
+\everyMPshowfont=\toks30
 \MPscratchCnt=\count112
-\MPscratchDim=\dimen120
+\MPscratchDim=\dimen125
 \MPnumerator=\count113
 \makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks30
+\everyMPtoPDFconversion=\toks31
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
@@ -308,30 +319,37 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 Package nonumonpart Info: The command \@endpart is redefined.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 30.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 36.
  (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 30.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 36.
  (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 30.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 36.
  (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 30.
+(Font)              <14.4> on input line 36.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 30.
+(Font)              <10> on input line 36.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 30.
+(Font)              <7> on input line 36.
  [1
 
 
 Non-PDF special ignored!
 <special> papersize=210mm,297mm
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./inferno.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./inferno.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 11.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 11.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 11.
+)
 \tf@toc=\write4
 \openout4 = `inferno.toc'.
 
@@ -341,34 +359,18 @@ Non-PDF special ignored!
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [1
 
+] [2
+
 ] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 58.
+LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 80.
  (/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 58.
- [2
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 74.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 74.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 74.
- [3
-
-] [4
-
-] [1
-
-] [2]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 101.
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 110.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 80.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 84.
  (/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -378,26 +380,68 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [3
 
+] [4
+
+] [5
+
+] [1
+
+] [2]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 125.
+ [3
+
 ] [4] [5
 
 ] [6] [7] [8] [9] [10] [11
 
 ] [12] [13
 
-] [14] (./inferno.aux) ) 
+]
+<start_menu.png, id=75, 642.4pt x 481.8pt>
+File: start_menu.png Graphic file (type png)
+<use start_menu.png>
+Package pdftex.def Info: start_menu.png  used on input line 256.
+(pdftex.def)             Requested size: 195.0pt x 146.24669pt.
+ [14 <./start_menu.png>]
+<manual.png, id=79, 642.4pt x 481.8pt>
+File: manual.png Graphic file (type png)
+<use manual.png>
+Package pdftex.def Info: manual.png  used on input line 268.
+(pdftex.def)             Requested size: 195.0pt x 146.24669pt.
+ [15 <./manual.png>]
+<files.png, id=83, 642.4pt x 481.8pt>
+File: files.png Graphic file (type png)
+<use files.png>
+Package pdftex.def Info: files.png  used on input line 296.
+(pdftex.def)             Requested size: 195.0pt x 146.24669pt.
+ [16
+
+]
+<files-menu.png, id=87, 642.4pt x 481.8pt>
+File: files-menu.png Graphic file (type png)
+<use files-menu.png>
+Package pdftex.def Info: files-menu.png  used on input line 316.
+(pdftex.def)             Requested size: 195.0pt x 146.24669pt.
+<brutus.png, id=88, 642.4pt x 481.8pt>
+File: brutus.png Graphic file (type png)
+<use brutus.png>
+Package pdftex.def Info: brutus.png  used on input line 326.
+(pdftex.def)             Requested size: 195.0pt x 146.24669pt.
+ [17 <./files.png> <./files-menu.png>] [18 <./brutus.png>] (./inferno.aux) ) 
 Here is how much of TeX's memory you used:
- 6128 strings out of 492167
- 89088 string characters out of 6131558
- 206179 words of memory out of 5000000
- 10267 multiletter control sequences out of 15000+600000
- 68778 words of font info for 97 fonts, out of 8000000 for 9000
+ 6462 strings out of 492167
+ 93296 string characters out of 6131558
+ 213109 words of memory out of 5000000
+ 10575 multiletter control sequences out of 15000+600000
+ 69587 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,6n,45p,833b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on inferno.pdf (20 pages, 203267 bytes).
+ 46i,6n,45p,920b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on inferno.pdf (25 pages, 264868 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18433 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 18458 words of extra memory for PDF output out of 20736 (max. 10000000)
 
