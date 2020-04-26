@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex inferno.idx"] 1587809296 "inferno.idx" "inferno.ind" "inferno" 1587840243
-  "inferno.idx" 1587840173 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex inferno.idx"] 1587809296 "inferno.idx" "inferno.ind" "inferno" 1587897354
+  "inferno.idx" 1587897353 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "inferno.ind"
   "inferno.ilg"
-["pdflatex"] 1587840172 "inferno.tex" "inferno.pdf" "inferno" 1587840243
+["pdflatex"] 1587897353 "inferno.tex" "inferno.pdf" "inferno" 1587897354
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1572595918 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1572595918 2327 9d6df24f9c4f7368395224341a95523a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc" 1572595918 2359 de53213020575850c8f8debc35095765 ""
@@ -94,15 +94,15 @@
   "/usr/share/texmf-dist/tex/latex/ucs/utf8x.def" 1572592815 8036 21f7ac37aafb6cfeddbb196b8bfd6280 ""
   "/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty" 1572592815 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1587147714 4567315 5bff4ef6a80dad29ef009f9621a3294a ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1587147691 8044939 89f2e011f7a0c932a29ba4073502f201 ""
-  "inferno.aux" 1587840173 655 56fd88b45fb792889a315782b4e710b5 "pdflatex"
-  "inferno.ind" 1587826626 0 d41d8cd98f00b204e9800998ecf8427e "makeindex inferno.idx"
-  "inferno.tex" 1587840172 21978 663cb4da2f52d612d2ee363527899139 ""
-  "inferno.toc" 1587840173 351 5ff13bbfe522b846a5c87461d60d0028 "pdflatex"
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1587147931 334286 7d54d57af850f32d2e4cd0d3222731c3 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1587147917 8044939 0faf3f72f02e850181fdc04d9dd7f8b0 ""
+  "inferno.aux" 1587897353 655 56fd88b45fb792889a315782b4e710b5 "pdflatex"
+  "inferno.ind" 1587809296 0 d41d8cd98f00b204e9800998ecf8427e "makeindex inferno.idx"
+  "inferno.tex" 1587897351 23428 611cbe7a6a507a56bc57cf0123733226 ""
+  "inferno.toc" 1587897353 351 5ff13bbfe522b846a5c87461d60d0028 "pdflatex"
   (generated)
-  "inferno.toc"
+  "inferno.aux"
   "inferno.idx"
   "inferno.log"
   "inferno.pdf"
-  "inferno.aux"
+  "inferno.toc"
