@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex inferno.idx"] 1587809296 "inferno.idx" "inferno.ind" "inferno" 1587993317
-  "inferno.idx" 1587993316 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex inferno.idx"] 1588015649 "inferno.idx" "inferno.ind" "inferno" 1588016453
+  "inferno.idx" 1588016453 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "inferno.ind"
   "inferno.ilg"
-["pdflatex"] 1587993316 "inferno.tex" "inferno.pdf" "inferno" 1587993317
+["pdflatex"] 1588016452 "inferno.tex" "inferno.pdf" "inferno" 1588016453
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1572595918 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1572595918 2327 9d6df24f9c4f7368395224341a95523a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc" 1572595918 2359 de53213020575850c8f8debc35095765 ""
@@ -99,17 +99,18 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1587147931 334286 7d54d57af850f32d2e4cd0d3222731c3 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1587147917 8044939 0faf3f72f02e850181fdc04d9dd7f8b0 ""
   "brutus.png" 1587924180 20571 ac6b0cd1cb04d0a98c98e694bcfab410 ""
+  "edit.png" 1588015024 8968 df1e873479dafa1a9424b73b15cebd33 ""
   "files-menu.png" 1587923771 9174 bbff6cb6950fe0438382e0f3723903fd ""
   "files.png" 1587922014 11250 53a77a0a544f87834d0659edc2b3d1b9 ""
-  "inferno.aux" 1587993317 1751 428f0fd6de57a6ff8ed914002e9ac83d "pdflatex"
-  "inferno.ind" 1587809296 0 d41d8cd98f00b204e9800998ecf8427e "makeindex inferno.idx"
-  "inferno.tex" 1587993315 35408 41dba2c69fb062e51c46a90665dae451 ""
-  "inferno.toc" 1587993317 571 deae9f215ab301fe15539a40bda1d90b "pdflatex"
+  "inferno.aux" 1588016453 1955 555f0ea4382ed87047df51a307a927c1 "pdflatex"
+  "inferno.ind" 1588015649 0 d41d8cd98f00b204e9800998ecf8427e "makeindex inferno.idx"
+  "inferno.tex" 1588016450 37000 3cb0f0ebc82f08edcb98a6b7ba53485c ""
+  "inferno.toc" 1588016453 607 853d00064af330c0f16bca250e6bc9b7 "pdflatex"
   "manual.png" 1587907511 17658 0c3aeb97c233c03994ed84a74e158a1a ""
   "start_menu.png" 1587906937 8281 675ab68c9c3c7451640997e3f52b5ca2 ""
   (generated)
-  "inferno.aux"
   "inferno.log"
-  "inferno.idx"
+  "inferno.aux"
   "inferno.pdf"
   "inferno.toc"
+  "inferno.idx"

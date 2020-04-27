@@ -172,6 +172,9 @@ INPUT ./files-menu.png
 INPUT brutus.png
 INPUT ./brutus.png
 INPUT ./brutus.png
+INPUT edit.png
+INPUT ./edit.png
+INPUT ./edit.png
 INPUT inferno.aux
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
