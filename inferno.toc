@@ -9,3 +9,5 @@
 \contentsline {chapter}{Commencing the Descent}{xiii}% 
 \contentsline {chapter}{Combing through Hell's Inventory}{xvi}% 
 \contentsline {section}{Files}{xvi}% 
+\contentsline {section}{Charon}{xviii}% 
+\contentsline {section}{Edit}{xix}% 

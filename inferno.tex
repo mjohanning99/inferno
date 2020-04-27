@@ -289,50 +289,65 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
       \markboth{Files}{Files}
       \addcontentsline{toc}{section}{Files}
 
-      Its name is, I believe, rather self-explanatory — it merely provides us with a list of files; yet, it appears to struggle doing so, for when one tries to open it, one is pestered by the log, which puts itself into the spotlight to warn us of missing items. Lamentably, its messages are of little help; they speak of the user \texttt{root} which, apparently, does not exist; and they also speak of a missing \textit{plumber} — truly tragic that the system seems to be having problems with its plumbing.
+    Its name is, I believe, rather self-explanatory — it merely provides us with a list of files; yet, it appears to struggle doing so, for when one tries to open it, one is pestered by the log, which puts itself into the spotlight to warn us of missing items. Lamentably, its messages are of little help; they speak of the user \texttt{root} which, apparently, does not exist; and they also speak of a missing \textit{plumber} — truly tragic that the system seems to be having problems with its plumbing.
 
-      \begin{wrapfigure}{R}{0.55\textwidth}
-        \centering
-        \includegraphics[width=0.5\textwidth]{files.png}
-        \caption{Inferno's \textit{Files} program}
-      \end{wrapfigure}
+    \begin{wrapfigure}{R}{0.55\textwidth}
+      \centering
+      \includegraphics[width=0.5\textwidth]{files.png}
+      \caption{Inferno's \textit{Files} program}
+    \end{wrapfigure}
 
-      However, I believe our newly acquired friend, the \textit{manual} may be of help; let us thus spawn it hither once more and ask it for advice. It tells us the following: —
+    However, I believe our newly acquired friend, the \textit{manual} may be of help; let us thus spawn it hither once more and ask it for advice. It tells us the following: —
 
-      \begin{quote}
-        Plumber provides high-level message-passing between applications.
-      \end{quote}
+    \begin{quote}
+      Plumber provides high-level message-passing between applications.
+    \end{quote}
 
-      This helps us discern what its purpose is; but alas, this helps us but scantly in ascertaining what the error is implying — indeed it appears our installation is missing this plumber altogether, but what is one to do to mitigate this?
+    This helps us discern what its purpose is; but alas, this helps us but scantly in ascertaining what the error is implying — indeed it appears our installation is missing this plumber altogether, but what is one to do to mitigate this?
 
-      In addition to the aforementioned information — and more, for I showed but the main definition of what plumber does —, the manual page provides us with a file path wherein we are to find its rules for a specific user: \texttt{/usr/user/lib/plumbing},\\ wherein \texttt{user} must be replaced by the user who is currently using the sytem.
+    In addition to the aforementioned information — and more, for I showed but the main definition of what plumber does —, the manual page provides us with a file path wherein we are to find its rules for a specific user: \texttt{/usr/user/lib/plumbing},\\ wherein \texttt{user} must be replaced by the user who is currently using the sytem.
 
-      Upon entering the \texttt{/usr} directory, one immediately notices that there is but one lonely user present, namely \texttt{inferno} and the prioly mentioned \texttt{root} user is nowhere to be found.
+    Upon entering the \texttt{/usr} directory, one immediately notices that there is but one lonely user present, namely \texttt{inferno} and the prioly mentioned \texttt{root} user is nowhere to be found.
 
-      This discovery lead me to believe that a root user must be created, a task that, due to Inferno's philosophy of all things being files, should be easily accomplished by simply copying the \texttt{inferno} folder and renaming it \texttt{root}; hence we created a second user, the one which Files was so desparately longing after, whereupon we should have finally gained the ability to execute the File program without it deeming it necessary to throw errors at us for things we did not do.
+    This discovery lead me to believe that a root user must be created, a task that, due to Inferno's philosophy of all things being files, should be easily accomplished by simply copying the \texttt{inferno} folder and renaming it \texttt{root}; hence we created a second user, the one which Files was so desparately longing after, whereupon we should have finally gained the ability to execute the File program without it deeming it necessary to throw errors at us for things we did not do.
 
-      \begin{wrapfigure}{R}{0.55\textwidth}
-        \centering
-        \includegraphics[width=0.5\textwidth]{files-menu.png}
-        \caption{Inferno's \textit{Files} program with menu}
-      \end{wrapfigure}
+    \begin{wrapfigure}{R}{0.55\textwidth}
+      \centering
+      \includegraphics[width=0.5\textwidth]{files-menu.png}
+      \caption{Inferno's \textit{Files} program with menu}
+    \end{wrapfigure}
 
-      Indeed, having done so appears to have tempered him who dwells below the surface of Inferno, for Files opens without errors; why, it finally allows us to click folders to open them at inspect their contents freely and without being disturbed.
+    Indeed, having done so appears to have tempered him who dwells below the surface of Inferno, for Files opens without errors; why, it finally allows us to click folders to open them at inspect their contents freely and without being disturbed.
 
-      But withal, one may now ask oneself, has what I have just done really been the correct way? Surely, one should be able to log in as a different user; yet, unfortunately, I have been unable to ascertain how that is possible, for the manual page of \texttt{wm} proved to be of but meager help. There seems to exist a command titled \texttt{logon} which, if used with \texttt{wm}, is supposed to provide a screen whereon a user can login; but alas, I have been unable to get it working.
+    But withal, one may now ask oneself, has what I have just done really been the correct way? Surely, one should be able to log in as a different user; yet, unfortunately, I have been unable to ascertain how that is possible, for the manual page of \texttt{wm} proved to be of but meager help. There seems to exist a command titled \texttt{logon} which, if used with \texttt{wm}, is supposed to provide a screen whereon a user can login; but alas, I have been unable to get it working.
 
-      \begin{wrapfigure}{R}{0.55\textwidth}
-        \centering
-        \includegraphics[width=0.5\textwidth]{brutus.png}
-        \caption{Brutus}
-      \end{wrapfigure}
+    \begin{wrapfigure}{R}{0.55\textwidth}
+      \centering
+      \includegraphics[width=0.5\textwidth]{brutus.png}
+      \caption{Brutus}
+    \end{wrapfigure}
 
-      Upon having fixed this program, one is now able to open, copy or remove files by clicking and pressing the left mouse button; thereupon, a menu appears where one may select an option. Should you choose the option to open a particular file, a new program will reveal itself titled \texttt{Brutus}; yet mysteriously, one is unable to find it inside the start menu, for there it is nowhere to be found — an elusive program indeed, and one that, I must admit, I trust but little; for it appears to have gotten its name from one of those vile politicians who, back in yonder days of the Roman Empire's glorious rule, stabbed Gaius Julius Caesar to death; why indeed, it was he whom Caesar asked, ``Et tu, Brute?'' in Shakespeare's play for Caesar did not believe even Brutus would have betrayed him; and as I have learnt to not trust this name, I shall be weary of it here, too.
-      
-      Yet we are lucky, for there exists a manual page regarding \texttt{Brutus} which proclaims that: —
+    Upon having fixed this program, one is now able to open, copy or remove files by clicking and pressing the left mouse button; thereupon, a menu appears where one may select an option. Should you choose the option to open a particular file, a new program will reveal itself titled \texttt{Brutus}; yet mysteriously, one is unable to find it inside the start menu, for there it is nowhere to be found — an elusive program indeed, and one that, I must admit, I trust but little; for it appears to have gotten its name from one of those vile politicians who, back in yonder days of the Roman Empire's glorious rule, stabbed Gaius Julius Caesar to death; why indeed, it was he whom Caesar asked, ``Et tu, Brute?'' in Shakespeare's play for Caesar did not believe even Brutus would have betrayed him; and as I have learnt to not trust this name, I shall be weary of it here, too.
+    
+    Yet we are lucky, for there exists a manual page regarding \texttt{Brutus} which proclaims that: —
 
-      \begin{quote}
-        Brutus is a multi-file editor for UTF format text files.
-      \end{quote}
+    \begin{quote}
+      Brutus is a multi-file editor for UTF format text files.
+    \end{quote}
 
+    Indeed, it appears to be but a mere text editor wherewith one is able to edit and view files; yet this raises two questions, for why can it not be found within the start menu and what is the reason for the existance of two text editors? Since, apart from vicious Brutus, there is another; one which is much more simple, something reflected in its name too, for it is called — in a truly uncreative Unix-fashion — merely \textit{Edit}. I wonder, whither has their philsophy been tossed; their philosophy of being minmalist, for I cannot grasp the existence of two editors — whereof one being notably inferior — whose functions and purposes are nigh identical.
+
+      \section*{Charon}
+        \markboth{Charon}{Charon}
+        \addcontentsline{toc}{section}{Charon}
+
+      Continuing Inferno's horrid tendency of naming its programs after beings whose names shall forever be associated with Death, its web browser is titled \texttt{Charon}; indeed he, from whom this program has received its name, is the ferryman of Hades; he whom the Greeks believe one must pay a toll for otherwise they mayn't cross the river; the river Styx; the infernal waters, which separate the land of those who live and those who are dead; and he who is unable to pay his dues is forced to wander its shores for aeons before Charon shall return to take him to yonder side. Indeed, it was the custom of the Greeks and the Romans to place a coin into the mouths of the Dead, lest they arrive at the shores of the sulphurous waters, impoverished and without a coin to part with whereupon they would be damned to wander its dismal coasts for years upon years, for Charon would not take aboard those poor souls who did not pay; nay, he would leave them ashore.
+
+      Truly, it appears that even we have been left ashore, damned to wander aimlessly, for we are unable to open websites but the Inferno's official website. Must we, too, wait aeons for him to return to us so that he may row us across the Internet river at speeds unfathomable, to allow us to reach other computers, located half-way across the world, in but the blink of an eye?
+
+      It surely appears to be the case, for I have been unable to ascertain its problem. It complains of a missing \texttt{host} file, but the lack of verbosity is truly aggravating; and lest my computer gets thrown through the window I shall continue with the next program.
+
+        \section*{Edit}
+          \markboth{Edit}{Edit}
+          \addcontentsline{toc}{section}{Edit}
 \end{document}
