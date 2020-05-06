@@ -7,3 +7,5 @@ inferno.ind
 inferno.log
 inferno.synctex.gz
 inferno.toc
+texput.fls
+texput.log

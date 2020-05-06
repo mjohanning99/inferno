@@ -389,4 +389,38 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
 
      The first aspect of this program I wish to illustrate is its mouse support; for, indeed, it may be controlled by one's mouse, yet its controls may seem rather unintuitive to those more accustomed to modern systems. One must also be prudent to differentiate between the title bar Acme has been imparted with by \textit{wm} and its inner title bars, as the one which it has receieved from \textit{wm} controls but the ``outer'' window of Acme itself; that is, it controls all of Acme, but not less and the inner parts of Acme cannot be manipulated or controlled using the outer title bar. The outer title bar, should my explanation sound too bizarre, is the title bar which contains the name of the program on its left side; and three buttons which enlarge, minimise or close the window respectively on the right side.
 
+     These two title bars have two rather distinct functions and controls, for the outer title bar is controlled in a fashion similar to that which is used on operating systems such as \textit{Windows} wherein you are required to push the left mouse button to activate their functions. Yet the inner title bars depart from this control scheme quite significantly — and wherefore this has been done eludes me greatly —, for one is required to make is of all available mouse buttons; indeed, using the middle mouse button is a frequent occurence in Inferno.
+
+     I belive it pertinent, though, to commence by studying the individual parts of the inner title bars prior to my explanation of their controls — for how may one control something one knows but little knowledge of?
+
+    As visible on the provided photograph, there exist several windows within Acme, whereof each is in the possession of its own bar; yet there also exists a title may I shall henceforth call the \textit{master title bar}, for therewith one may control all of the inner windows — indeed, one may spawn a new inner window with it. Peculiarly, there appears to exist an \textit {Exit} field on the master title bar, rendering the \textit{X} of the outer title bar redundant; surely, leaving it out would have not impeded the program's functionality in any way but could have aided in making it appear less complicated.
+
+    In addition to this absolutely expendable button and the aforementioned button permitting one to spawn a new column — or inner window —, three other buttons can be observed; namely \textit{Kill}, \textit{Putall} and \textit{Dump} — truly abhorrent names, I must confess, and ones that do not appear to have any discernable function, for clicking them seems to do but little. Thus, consulting the manual would no doubt be advantageous. 
+
+    Upon having done so, one should have ascertained that \textit{Dump} saves Acme's current state — which, I believe, encompasses the currently opened inner windows / column and their position within Acme itself — to ``acme dump''; it truly appears these names have been chosen by someone of but little good taste, for they are quite dismal beyond any doubt — surely, the choosing of a less vulgar and perhaps more descriptive name would not have been too difficult a task.
+
+    The function of the \textit{Kill} button is, to me, rather equivocal, for the manual has but little information regarding its function and merely states the following: –
+
+    \begin{quote}
+      ``Send a kill note to acme — initiated commands named as arguments''
+    \end{quote}
+
+    Given this rather tenuous explanation of its function is, unfortunately, insufficient for me to comprehend it; due to that, I shall refrain from commenting on it further and proceed with the last item, namely \textit{Putall}.
+
+    Yet, I was forced to uncover, it, too, appears to have a rather cryptic manual entry, for it describes its function thusly: —
+
+    \begin{quote}
+      ``Write all dirty windows whose names indicate existing regular files''
+    \end{quote}
+
+    It is truly remarkable how a manual page has the ability to baffle one so greatly that he is thence even more perplexed as he was prior to having read it. For, indeed, why would there be dirty windows on an operating system; something that does not physically exist? Let us therefore continue by examining the other windows' title bars, even though they, too, appear to contain names I find much too cryptic.
+
+    The very first item thereon is a simple square, either suffused entirely by a cerulean colour or merely posessing borders of that colour, in which case the other parts of the square are entirely white; yet the reason wherefore there exist two distinct types of rectangles escapes me, for they seem to fulfill the exact same functions, namely moving the window around. Indeed, if one wishes to change the location of one of Acme's inner windows, one is required to press and hold the left mouse button and hence move the window whither one desires. 
+
+    Located to its right, a button titled \textit{New} can be found, wherewith one may spawn additional inner windows.
+
+    Thereafter appears \textit{Cut}, which allows one to remove the text which has been selected and, as the manual states, which the computer then places into the ``snarf buffer'' — horrid naming conventions will, undoubtedly, not disappear henceforth. \textit{Snarf} appears to be the name of the system's clipboard, which also explains the function of the \textit{Snarf} button which can be seen further to the right — it copies selected text into the clipboard.
+
+    \textit{Zerox} has a rather intriguing function, for upon having clicked it, a new windows containing the text we had previously selected, emerges. 
+
 \end{document}
