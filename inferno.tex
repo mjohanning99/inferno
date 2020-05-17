@@ -1,7 +1,7 @@
-\documentclass[a4paper,12pt]{report}
-\special{papersize=210mm,297mm}
+\documentclass[a5paper,twoside,12pt]{report}
 
-%\usepackage[LGR]{fontenc}
+%%%%%%%%%% Packages %%%%%%%%%%
+\usepackage[outer=2cm, inner=2cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{microtype}
 \usepackage{graphicx}
@@ -15,77 +15,74 @@
 \usepackage{afterpage}
 \usepackage{nonumonpart}
 \usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{titling} 
+\usepackage[T1]{fontenc}
+\usepackage{bold-extra}
 \makeindex
 
 \newlength\longest
+\setlength{\marginparwidth}{0pt}
 
 \titleformat{\section}[wrap]
 {\normalfont\bfseries}
 {\thesection.}{0.5em}{}
 \titlespacing{\section}{12pc}{1.5ex plus .1ex minus .2ex}{1pc}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{The Inferno Adventures}
+\fancypagestyle{plain}{%  the preset of fancyhdr 
+  \fancyhf{} % clear all header and footer fields
+  \fancyhead[LE,RO]{\thepage}
+  \fancyhead[LO]{\leftmark}
+  \fancyhead[RE]{The Inferno Adventures}}
 
 \begin{document}
-
 \pagenumbering{gobble} 
 
+%%%%%%%%%% Pretitle %%%%%%%%%%
+\title{%
+  Adventures in Trying the Inferno Operating System
+}
+\date{}
+\author{}
+\maketitle
+
+%%%%%%%%%% EMPTY PAGE %%%%%%%%%% 
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+
+%%%%%%%%%% Posttitle %%%%%%%%%% 
 \title{%
   Adventures in Trying the Inferno Operating System \\
-  \textit{Observations and Notes}
+  \begin{center}\textit{Observations and Notes}\end{center}
+  \author{By Marvin Johanning}
 }
-\author{By Marvin Johanning\\(info@)marvinjohanning.de}
-\date{April 2020}
 \maketitle
-\pagebreak
 
-\tableofcontents
-\pagebreak
+%%%%%%%%%% Copyright and Impressum %%%%%%%%%%
+\thispagestyle{empty}
+\noindent\textsc{\underline{Text}}: © Copyright 2020 Marvin Johanning
 
-%%%%%%%%%% Introduction %%%%%%%%%%
+\noindent\textsc{\underline{Cover design}}: © Copyright 2020 Marvin Johanning
 
-\pagenumbering{arabic}
-\chapter*{Introduction}
-  \markboth{Introduction}{Introduction}
-  \addcontentsline{toc}{chapter}{Introduction}
-In the following document you will be presented with some information regarding the Inferno operating system created by Bell Labs in the mid 1990s. Its name and somewhat mysterious aura led me to write it in a style akin to the one that can be seen in older books, such as those from the early 20th or late 19th centuries. This applies to both the chapter headings, as well as the text itself.
+\vspace{8mm}\noindent\textbf{\underline{Copyright (C) 2020 Marvin Johanning.}}
 
-I believe that this may also make reading it somewhat more enjoyable than the otherwise rather dryly written literature available on this subject and perhaps help those who are interested in this operating system — and that may possibly not know much about Linux itself either — can have an interestingly written introduction.
+\noindent© 2020 by Marvin Johanning\\``Adventures in Trying the Inferno Operating System'' by Marvin Johanning is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit https://creativecommons.org\allowbreak/licenses/by-nc-sa/4.0.
 
-It is however to be noted that this is not meant to be a complete introduction to the operating system and its underlying structure; it is merely intended to be a quick overview of the operating system, how to install it and what you can do with it.
+\vspace{20mm}\noindent\textsc{Publishing}: \\
+Marvin Johanning\\
+Salzufler Str. 66\\
+33719 Bielefeld\\
+info@marvinjohanning.de
 
-I highly encourage to to critisise my work — this is, obviously, without having to result to petty insults and the like — and send me an email with your feedback. It is not unlikely that I have made a mistake — or perhaps even several — over the course of this document and I always like to be corrected if there are factual, grammatical or spelling errors.
-
-This work is licensed under a Creative Commons license, which means you are allowed to share it with others free of charge and I do encourage you to do so; you should never have to pay for this document and I would like you to report any such occurences to me, since commercial distribution is strictly prohibited by the license and those who make a profit from it are in violation of it.
-
-You may also, if you wish, make your own changes to the document with regards to the terms stated in the license document which you will find more information on on page \pageref{copyright}.
-\pagebreak
-
-%%%%%%%%%% About %%%%%%%%%%
-\chapter*{About me}
-  \markboth{About me}{About me}
-  \addcontentsline{toc}{chapter}{About me}
-
-  My name is Marvin Johanning, I'm twenty-one years old and currently reside in a city many deem to not exist — which, obviously, is untrue for I \textit{do} live here and surely I am real. I like writing things, even though, perhaps, I am not great at it; yet I enjoy doing so and only through practice can you improve, which is why I write as much as possible as frequently as I can.
-
-  I have recently switched from writing in LibreOffice to \LaTeX, as LibreOffice has proven itself to be headache-inducing when working with large amounts of text which you wish to reformat at a later date. 
-
-  I tend to write about things relating to languages — be it real or programming languages —, computers and, though rarely, politics. All of these can be found on my website. My biggest writing project to-date is \textit{The Intricacies of Ancient Egyptian Hieroglyphics}, which incidentally was what lead me to use \LaTeX, which is still to be done; information regarding it can, too, be found on my website.
-
-%%%%%%%%%% Copyright %%%%%%%%%%
-
-\chapter*{Copyright}
-  \label{copyright}
-  \markboth{Copyright}{Copyright}
-  \addcontentsline{toc}{chapter}{Copyright}
-
-\noindent
-© 2020 Marvin Johanning
-
-Adventures in Trying the Inferno Operating System: Observations and Notes is made available under the Creative Commons Attribution-\\NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-Should you have not received a copy of the \texttt{.tex} file with this document, it can be found on my website marvinjohanning.de
+\vspace{25mm}\noindent\textsc{Printing}: epubli – ein Service der neopubli GmbH, Berlin
+\newpage
 
 %%%%%%%%%% Introductory quote %%%%%%%%%%
-
 \clearpage
 \thispagestyle{empty}
 \null\vfill
@@ -100,16 +97,49 @@ Should you have not received a copy of the \texttt{.tex} file with this document
 \vfill\vfill
 \clearpage\newpage
 \end{center}
+\newpage
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%% Introduction %%%%%%%%%%
+\pagenumbering{roman}
+\chapter*{Introduction}
+  \markboth{Introduction}{Introduction}
+  \addcontentsline{toc}{chapter}{Introduction}
+In the following document you will be presented with some information regarding the Inferno operating system created by Bell Labs in the mid 1990s. Its name and somewhat mysterious aura led me to write it in a style akin to the one that can be seen in older books, such as those from the early 20th or late 19th centuries. This applies to both the chapter headings, as well as the text itself.
+
+I believe that this may also make reading it somewhat more enjoyable than the otherwise rather dryly written literature available on this subject and perhaps help those who are interested in this operating system — and that may possibly not know much about Linux itself either — can have an interestingly written introduction.
+
+It is however to be noted that this is not meant to be a complete introduction to the operating system and its underlying structure; it is merely intended to be a quick overview of the operating system, how to install it and what you can do with it.
+
+I highly encourage to to critisise my work — this is, obviously, without having to result to petty insults and the like — and send me an email with your feedback. It is not unlikely that I have made a mistake — or perhaps even several — over the course of this document and I always like to be corrected if there are factual, grammatical or spelling errors.
+
+This work is licensed under a Creative Commons license, which means you are allowed to share it with others free of charge and I do encourage you to do so; you should never have to pay for this document in a digital format and I would like you to report any such occurences to me, since commercial distribution is strictly prohibited by the license and those who make a profit from it are in violation of it. Physical copies can be obtained solely from me, at least commercially. 
+
+\newpage
+
+%%%%%%%%%% About %%%%%%%%%%
+\chapter*{About me}
+  \markboth{About me}{About me}
+  \addcontentsline{toc}{chapter}{About me}
+
+  My name is Marvin Johanning, I'm twenty-one years old and currently reside in a city many deem to not exist — which, obviously, is untrue for I \textit{do} live here and surely I am real. I like writing things, even though, perhaps, I am not great at it; yet I enjoy doing so and only through practice can you improve, which is why I write as much as possible as frequently as I can.
+
+  I have recently switched from writing in LibreOffice to \LaTeX, as LibreOffice has proven itself to be headache-inducing when working with large amounts of text which you wish to reformat at a later date. 
+
+  I tend to write about things relating to languages — be it real or programming languages —, computers and, though rarely, politics. All of these can be found on my website. My biggest writing project to-date is \textit{The Intricacies of Ancient Egyptian Hieroglyphics} (ISBN: 978-3-752952-49-0), which incidentally was what lead me to use \LaTeX, which is still to be done; information regarding it can, too, be found on my website.
+  \newpage
+
 
 %%%%%%%%%% Empty page %%%%%%%%%%
-
+\pagenumbering{gobble}
 \thispagestyle{empty}
   \mbox{}
   \newpage
 
 %%%%%%%%%% Beginning of text itself %%%%%%%%%%
-
-\pagenumbering{roman}
+\pagenumbering{arabic}
 \part*{Book I}
   \markboth{Book I}{Book I}
   \addcontentsline{toc}{part}{Book I}
@@ -141,12 +171,12 @@ Yet to my utter dismay, it was quickly revealed that it seems to have been long 
 
 For they realised their old operating system had become \textit{too} old, even by the standards of the mid-1980s. They wished to create a system — from scratch — that would encompass these new-fangled ideas, such as graphical user interfaces; a system that did not have these features hapharzardly stiched on — as a surgeon would try to fix a severly wounded fellow — but one that was built with them in mind; a system that would abide by UNIX' philosophy of everything being a file, but one that was more adapt to modern — at least, for the time — standards.
 
-But alas, as the passage of time has revealed, their efforts have been in vain; for ask any fellow, even those who are learned and know of computers, and chances are high he will not know of their failed efforts to create a superior UNIX.\@
+But alas, as the passage of time has revealed, their efforts have been in vain; for ask any fellow, even those who are learned and know of computers, and chances are high he will not know of their failed efforts to create a superior UNIX.
 
 Yet this is not a tale of Plan 9, it is one of its successor Inferno. Having learnt from their former mistakes with Plan 9, they strove to create a superior Plan 9; one that would be used in network environments; one that was portable and lightweight and could easily run on a myriad of different types of machine.
 Yet tragically, even Inferno seems to have gone under — perhaps even into hell itself.
 
-But fret not! While abandoned by Bell Labs long ago — what vile traitors they are! —, it has since been acquired by an American company, who have released the latest version in 2015. Let us unveil this long forgotten gem. \pagebreak
+But fret not! While abandoned by Bell Labs long ago — what vile traitors they are! —, it has since been acquired by an American company, who have released the latest version in 2015. Let us unveil this long forgotten gem. \newpage
 
 \chapter*{Resurrecting the Devil}
   \markboth{Resurrecting the Devil}{Resurrecting the Devil}
@@ -194,13 +224,13 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
 
   Notwithstanding, it must be used, for our machine will not permit us to make changes without it; you may attempt to run \texttt{makemk.sh} without \texttt{sudo}, but you shall be given an error, as one may not make any changes to the system without having been having been granted the appropriate privileges.
 
-  If you deem yourself to be prepared, execute \texttt{sudo ./makemk.sh} whereupon you may be presented with a number of warnings that can, however, be ignored; for if, after a few seconds, you are told that ``mk binary built successfully!'', everything has worked and a binary has been concocted and can thence be found inside \texttt{/usr/local/inferno/Linux/386/bin}.
+  If you deem yourself to be prepared, execute \texttt{sudo ./make\\mk.sh} whereupon you may be presented with a number of warnings that can, however, be ignored; for if, after a few seconds, you are told that ``mk binary built successfully!'', everything has worked and a binary has been concocted and can thence be found inside \texttt{/usr/local/inferno/Linux/386/bin}.
 
   But alas, our machine is dim-witted, for running \texttt{mk} does not yield anything; nay, it appears the command does not exist — which is undoubtebly wrong, for its existance can be ascertained by looking at the aforementioned directory. So what is one to do? The machine needs to be told where to find it — and the binaries that shall be brought into existance soon —, which means that we will need to modify the \texttt{PATH} variable.
 
   The contents of this variable tell our machine where binaries are located and one must thus affix the path to our previously created binary onto the \texttt{PATH} variable, a task swiftly accomplished; but first it is imperative to know what Shell is currently being used. This is achieved by typing \texttt{echo \$SHELL} into one's terminal, which, in my case, yields \texttt{/usr/bin/zsh}, for I use Zsh; on your system, a likely candidate will be \texttt{/usr/bin/bash}, since the Bourne Shell, as it is called, is one of the most prominent ones in use today.
 
-  Nevertheless, one needs to add the following line to one's \texttt{~/.bashrc} or \texttt{~/.zshrc} whose purpose it is to inform the machine of our newly built binary's location, so that by typing its name it will be executed: \texttt{export PATH="/usr/local/bin/inferno/Linux/386/bin:\$PATH"}.
+  Nevertheless, one needs to add the following line to one's \texttt{~/.bashrc} or \texttt{~/.zshrc} whose purpose it is to inform the machine of our newly built binary's location, so that by typing its name it will be executed: \texttt{export PATH="/usr/local/bin/\\inferno/Linux/386/bin:\$PATH"}.
 
   Should you have neglected to heed my previous warnings regarding the usage of a different operating system, you must change the path accordingly; though I do trust you did no such thing.
 
@@ -274,7 +304,7 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
 
     This program will prove itself invaluable, for it will dispense information regarding practically every single part of this operating system and we shall be referring back to it frequently.
 
-    Time has now come to open pandora's box and examine what programs Inferno provides for us, how they are used and what can be done with them.\pagebreak
+    Time has now come to open pandora's box and examine what programs Inferno provides for us, how they are used and what can be done with them. \newpage
 
     \chapter*{Combing through Hell's Inventory}
       \markboth{Combing through Hell's Inventory}{Combing through Hell's inventory}
@@ -306,17 +336,17 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
 
     This helps us discern what its purpose is; but alas, this helps us but scantly in ascertaining what the error is implying — indeed it appears our installation is missing this plumber altogether, but what is one to do to mitigate this?
 
-    In addition to the aforementioned information — and more, for I showed but the main definition of what plumber does —, the manual page provides us with a file path wherein we are to find its rules for a specific user: \texttt{/usr/user/lib/plumbing},\\ wherein \texttt{user} must be replaced by the user who is currently using the sytem.
-
-    Upon entering the \texttt{/usr} directory, one immediately notices that there is but one lonely user present, namely \texttt{inferno} and the prioly mentioned \texttt{root} user is nowhere to be found.
-
-    This discovery lead me to believe that a root user must be created, a task that, due to Inferno's philosophy of all things being files, should be easily accomplished by simply copying the \texttt{inferno} folder and renaming it \texttt{root}; hence we created a second user, the one which Files was so desparately longing after, whereupon we should have finally gained the ability to execute the File program without it deeming it necessary to throw errors at us for things we did not do.
-
     \begin{wrapfigure}{R}{0.55\textwidth}
       \centering
       \includegraphics[width=0.5\textwidth]{files-menu.png}
       \caption{Inferno's \textit{Files} program with menu}
     \end{wrapfigure}
+
+    In addition to the aforementioned information — and more, for I showed but the main definition of what plumber does —, the manual page provides us with a file path wherein we are to find its rules for a specific user: \texttt{/usr/user/lib/plu-\\mbing}, wherein \texttt{user} must be replaced by the user who is currently using the sytem.
+
+    Upon entering the \texttt{/usr} directory, one immediately notices that there is but one lonely user present, namely \texttt{inferno} and the prioly mentioned \texttt{root} user is nowhere to be found.
+
+    This discovery lead me to believe that a root user must be created, a task that, due to Inferno's philosophy of all things being files, should be easily accomplished by simply copying the \texttt{inferno} folder and renaming it \texttt{root}; hence we created a second user, the one which Files was so desparately longing after, whereupon we should have finally gained the ability to execute the File program without it deeming it necessary to throw errors at us for things we did not do.
 
     Indeed, having done so appears to have tempered him who dwells below the surface of Inferno, for Files opens without errors; why, it finally allows us to click folders to open them at inspect their contents freely and without being disturbed.
 
@@ -342,9 +372,16 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
         \markboth{Charon}{Charon}
         \addcontentsline{toc}{section}{Charon}
 
+      \begin{wrapfigure}{R}{0.55\textwidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{edit.png}
+        \caption{Edit and its options menu}
+      \end{wrapfigure}
+
       Continuing Inferno's horrid tendency of naming its programs after beings whose names shall forever be associated with Death, its web browser is titled \texttt{Charon}; indeed he, from whom this program has received its name, is the ferryman of Hades; he whom the Greeks believe one must pay a toll for otherwise they mayn't cross the river; the river Styx; the infernal waters, which separate the land of those who live and those who are dead; and he who is unable to pay his dues is forced to wander its shores for aeons before Charon shall return to take him to yonder side. Indeed, it was the custom of the Greeks and the Romans to place a coin into the mouths of the Dead, lest they arrive at the shores of the sulphurous waters, impoverished and without a coin to part with whereupon they would be damned to wander its dismal coasts for years upon years, for Charon would not take aboard those poor souls who did not pay; nay, he would leave them ashore.
 
       Truly, it appears that even we have been left ashore, damned to wander aimlessly, for we are unable to open websites but the one of Inferno itself. Must we, too, wait aeons for him to return to us so that he may row us across the Internet river at speeds unfathomable, to allow us to reach other computers, located half-way across the world, in but the blink of an eye?
+
 
       It surely appears to be the case, for I have been unable to ascertain its problem. It complains of a missing \texttt{host} file, but the lack of verbosity is truly aggravating; and lest my computer gets thrown through the window I shall continue with the next program.
 
@@ -352,13 +389,8 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
         \markboth{Edit}{Edit}
         \addcontentsline{toc}{section}{Edit}
 
-      Having briefly touched upon the subject of editors when discussing Files and the editor wherewith it comes bundled, Brutus, which it opens when attempting to view files, we shall one more comment on the subject of editors. Since, as we have observed, one cannot spawn Brutus from the start menu; nay, for there one may find but plain \textit{Edit}, a truly bleak program, wholly overshadowed by its seemingly big brother Brutus. Its option menu sparsely populated and its contents cryptic — for what is \textit{Limbo}?
 
-      \begin{wrapfigure}{L}{0.55\textwidth}
-        \centering
-        \includegraphics[width=0.5\textwidth]{edit.png}
-        \caption{Edit and its options menu}
-      \end{wrapfigure}
+      Having briefly touched upon the subject of editors when discussing Files and the editor wherewith it comes bundled, Brutus, which it opens when attempting to view files, we shall one more comment on the subject of editors. Since, as we have observed, one cannot spawn Brutus from the start menu; nay, for there one may find but plain \textit{Edit}, a truly bleak program, wholly overshadowed by its seemingly big brother Brutus. Its option menu sparsely populated and its contents cryptic — for what is \textit{Limbo}?
 
       I must confess that I indeed do know of Limbo and its purpose; for it is the language wherein one is supposed to write programs for Inferno, to extent its reach into the world and to expand upon its existing functions. But alas, 'tis a subject much too advanced for us at this stage, for barely do we even know Inferno's core functions; how are we, then, to write programs for it? Fear not of missing out, for we shall examine Limbo, but first we must understand Inferno's inner works; only having done thusly shall we be aptly qualified to use Limbo.
 
