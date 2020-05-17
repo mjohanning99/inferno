@@ -23,21 +23,24 @@
 
 \newlength\longest
 \setlength{\marginparwidth}{0pt}
+\setlength{\headheight}{15pt}
 
 \titleformat{\section}[wrap]
 {\normalfont\bfseries}
 {\thesection.}{0.5em}{}
 \titlespacing{\section}{12pc}{1.5ex plus .1ex minus .2ex}{1pc}
+
+%%%%%%%%%% Fancy HDR %%%%%%%%%%
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\leftmark}
-\fancyhead[RE]{The Inferno Adventures}
-\fancypagestyle{plain}{%  the preset of fancyhdr 
-  \fancyhf{} % clear all header and footer fields
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[RE]{\textsc{The Inferno Adventures}}
+\fancypagestyle{plain}{
+  \fancyhf{} 
   \fancyhead[LE,RO]{\thepage}
   \fancyhead[LO]{\leftmark}
-  \fancyhead[RE]{The Inferno Adventures}}
+  \fancyhead[RE]{\textsc{The Inferno Adventures}}}
 
 \begin{document}
 \pagenumbering{gobble} 
@@ -97,10 +100,9 @@ info@marvinjohanning.de
 \vfill\vfill
 \clearpage\newpage
 \end{center}
-\newpage
 
 \tableofcontents
-\pagebreak
+
 
 %%%%%%%%%% Introduction %%%%%%%%%%
 \pagenumbering{roman}
@@ -128,7 +130,7 @@ This work is licensed under a Creative Commons license, which means you are allo
 
   I have recently switched from writing in LibreOffice to \LaTeX, as LibreOffice has proven itself to be headache-inducing when working with large amounts of text which you wish to reformat at a later date. 
 
-  I tend to write about things relating to languages — be it real or programming languages —, computers and, though rarely, politics. All of these can be found on my website. My biggest writing project to-date is \textit{The Intricacies of Ancient Egyptian Hieroglyphics} (ISBN: 978-3-752952-49-0), which incidentally was what lead me to use \LaTeX, which is still to be done; information regarding it can, too, be found on my website.
+  I tend to write about things relating to languages — be it real or programming languages —, computers and, though rarely, politics. All of these can be found on my website. My biggest writing project to-date is \textit{The Intricacies of Ancient Egyptian Hieroglyphics} (ISBN: 978-3-752952-49-0), which incidentally was what lead me to use \LaTeX, information regarding which can, too, be found on my website.
   \newpage
 
 
@@ -226,7 +228,7 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
 
   If you deem yourself to be prepared, execute \texttt{sudo ./make\\mk.sh} whereupon you may be presented with a number of warnings that can, however, be ignored; for if, after a few seconds, you are told that ``mk binary built successfully!'', everything has worked and a binary has been concocted and can thence be found inside \texttt{/usr/local/inferno/Linux/386/bin}.
 
-  But alas, our machine is dim-witted, for running \texttt{mk} does not yield anything; nay, it appears the command does not exist — which is undoubtebly wrong, for its existance can be ascertained by looking at the aforementioned directory. So what is one to do? The machine needs to be told where to find it — and the binaries that shall be brought into existance soon —, which means that we will need to modify the \texttt{PATH} variable.
+  But alas, our machine is dim-witted, for running \texttt{mk} does not yield anything; nay, it appears the command does not exist — which is undoubtebly wrong, for its existence can be ascertained by looking at the aforementioned directory. So what is one to do? The machine needs to be told where to find it — and the binaries that shall be brought into existence soon —, which means that we will need to modify the \texttt{PATH} variable.
 
   The contents of this variable tell our machine where binaries are located and one must thus affix the path to our previously created binary onto the \texttt{PATH} variable, a task swiftly accomplished; but first it is imperative to know what Shell is currently being used. This is achieved by typing \texttt{echo \$SHELL} into one's terminal, which, in my case, yields \texttt{/usr/bin/zsh}, for I use Zsh; on your system, a likely candidate will be \texttt{/usr/bin/bash}, since the Bourne Shell, as it is called, is one of the most prominent ones in use today.
 
@@ -366,7 +368,7 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
       Brutus is a multi-file editor for UTF format text files.
     \end{quote}
 
-    Indeed, it appears to be but a mere text editor wherewith one is able to edit and view files; yet this raises two questions, for why can it not be found within the start menu and what is the reason for the existance of two text editors? Since, apart from vicious Brutus, there is another; one which is much more simple, something reflected in its name too, for it is called — in a truly uncreative Unix-fashion — merely \textit{Edit}. I wonder, whither has their philsophy been tossed; their philosophy of being minmalist, for I cannot grasp the existence of two editors — whereof one being notably inferior — whose functions and purposes are nigh identical.
+    Indeed, it appears to be but a mere text editor wherewith one is able to edit and view files; yet this raises two questions, for why can it not be found within the start menu and what is the reason for the existence of two text editors? Since, apart from vicious Brutus, there is another; one which is much more simple, something reflected in its name too, for it is called — in a truly uncreative Unix-fashion — merely \textit{Edit}. I wonder, whither has their philsophy been tossed; their philosophy of being minmalist, for I cannot grasp the existence of two editors — whereof one being notably inferior — whose functions and purposes are nigh identical.
 
       \section*{Charon}
         \markboth{Charon}{Charon}
@@ -378,9 +380,9 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
         \caption{Edit and its options menu}
       \end{wrapfigure}
 
-      Continuing Inferno's horrid tendency of naming its programs after beings whose names shall forever be associated with Death, its web browser is titled \texttt{Charon}; indeed he, from whom this program has received its name, is the ferryman of Hades; he whom the Greeks believe one must pay a toll for otherwise they mayn't cross the river; the river Styx; the infernal waters, which separate the land of those who live and those who are dead; and he who is unable to pay his dues is forced to wander its shores for aeons before Charon shall return to take him to yonder side. Indeed, it was the custom of the Greeks and the Romans to place a coin into the mouths of the Dead, lest they arrive at the shores of the sulphurous waters, impoverished and without a coin to part with whereupon they would be damned to wander its dismal coasts for years upon years, for Charon would not take aboard those poor souls who did not pay; nay, he would leave them ashore.
+      Continuing Inferno's horrid tendency of naming its programs after beings whose names shall forever be associated with Death, its web browser is titled \texttt{Charon}; indeed he, from whom this program has received its name, is the ferryman of Hades; he whom the Greeks believe one must pay a toll for otherwise they mayn't cross the river; the river Styx; the infernal waters, which separate the land of those who live and those who are dead; and he who is unable to pay his dues is forced to wander its shores for æons before Charon shall return to take him to yonder side. Indeed, it was the custom of the Greeks and the Romans to place a coin into the mouths of the Dead, lest they arrive at the shores of the sulphurous waters, impoverished and without a coin to part with whereupon they would be damned to wander its dismal coasts for years upon years, for Charon would not take aboard those poor souls who did not pay; nay, he would leave them ashore.
 
-      Truly, it appears that even we have been left ashore, damned to wander aimlessly, for we are unable to open websites but the one of Inferno itself. Must we, too, wait aeons for him to return to us so that he may row us across the Internet river at speeds unfathomable, to allow us to reach other computers, located half-way across the world, in but the blink of an eye?
+      Truly, it appears that even we have been left ashore, damned to wander aimlessly, for we are unable to open websites but the one of Inferno itself. Must we, too, wait æons for him to return to us so that he may row us across the Internet river at speeds unfathomable, to allow us to reach other computers, located half-way across the world, in but the blink of an eye?
 
 
       It surely appears to be the case, for I have been unable to ascertain its problem. It complains of a missing \texttt{host} file, but the lack of verbosity is truly aggravating; and lest my computer gets thrown through the window I shall continue with the next program.
@@ -445,7 +447,7 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
       ``Write all dirty windows whose names indicate existing regular files''
     \end{quote}
 
-    It is truly remarkable how a manual page has the ability to baffle one so greatly that he is thence even more perplexed as he was prior to having read it. For, indeed, why would there be dirty windows on an operating system; something that does not physically exist? Let us therefore continue by examining the other windows' title bars, even though they, too, appear to contain names I find much too cryptic.
+    It is truly remarkable how a manual page has the ability to baffle one so greatly that he is thence even more perplexed than he was prior to having read it. For, indeed, why would there be dirty windows on an operating system; something that does not physically exist? Let us therefore continue by examining the other windows' title bars, even though they, too, appear to contain names I find much too cryptic.
 
     The very first item thereon is a simple square, either suffused entirely by a cerulean colour or merely posessing borders of that colour, in which case the other parts of the square are entirely white; yet the reason wherefore there exist two distinct types of rectangles escapes me, for they seem to fulfill the exact same functions, namely moving the window around. Indeed, if one wishes to change the location of one of Acme's inner windows, one is required to press and hold the left mouse button and hence move the window whither one desires. 
 
@@ -453,6 +455,33 @@ But fret not! While abandoned by Bell Labs long ago — what vile traitors they 
 
     Thereafter appears \textit{Cut}, which allows one to remove the text which has been selected and, as the manual states, which the computer then places into the ``snarf buffer'' — horrid naming conventions will, undoubtedly, not disappear henceforth. \textit{Snarf} appears to be the name of the system's clipboard, which also explains the function of the \textit{Snarf} button which can be seen further to the right — it copies selected text into the clipboard.
 
-    \textit{Zerox} has a rather intriguing function, for upon having clicked it, a new windows containing the text we had previously selected, emerges. 
+    \textit{Zerox} has a rather intriguing function, for upon having clicked it, a new windows containing the text which appeared in the old window, emerges; truly a most helpful function to be in the possession of, for it may save one precious time. Yet, it may not behave in the exact manner one expects it to behave, as it not merely spawns a new window; nay, it quasi-mirrors the window whence it was spawned, leading to the existence of two windows which each contain the exact same content. Indeed, changing the content of one window reveals that the cloned window, too, has its contents altered in the same manner, whereas my initial speculation was that Zerox would create a window which one could alter separately — but alas, this appears to not be true.
 
+    \begin{wrapfigure}{L}{0.55\textwidth}
+      \centering
+      \includegraphics[width=0.5\textwidth]{games.png}
+      \caption{Inferno's games}
+    \end{wrapfigure}
+
+    The reason behind the existence of such a function eludes me somewhat, for I am unfortunately incapable of understanding how one may use this in a meaningful way; having one's window precisely mirrored, to me, is a rather impractical behaviour. If, instead, one was able to modify the contents of each window independently, I would understand and even wholly endorse it; yet I fail to comprehend this particular implementation.
+
+    There exist a small number of additional functions, yet I found those but of little importance to mention here and we shall thus proceed with other programs.
+
+    \section*{Tetris and Bounce}
+      \markboth{Tetris and Bounce}{Tetris and Bounce}
+      \addcontentsline{toc}{section}{Tetris and Bounce}
+
+    The system is bundled with two games, one of which one may scantly call a \textit{game}, for it is but a screen premeated by bouncing balls of varying colours and the only controls one has over said balls is the amount appearing on screen, which one may de- or increase, and the ability to draw lines, off which the balls are able to bounce.
+
+
+    In addition to this, an actual game — a reproduction of the acclaimed \textit{Tetris}, a game which appears to have transcended time itself — can be played. Yet, once more, I cannot fathom wherefore this would be included, for this operating system was intended mainly for programmers who, I would like to argue, probably would not spend any time with playing a game, as their host operating system would have a much more capable environment for such an endeavour. 
+
+    I am wholly convinced by the fact that, had they left these games out, nothing of interest would have been lost and I believe their reason for creating these is to boast about their new programming language's abilities.
+
+    \section*{Utilities}
+      \markboth{Utilities}{Utilities}
+      \addcontentsline{toc}{section}{Utilities}{Utilities}
+
+    In addition to the aforementioned games, the system incorporates a number of utilities, whereof some appear to be of but very little use; indeed, the \textit{Coffee} utility — a program wherewith one is able to control the speed and shakiness of half a dozen coffee making machines, spinning around fruitlessly in front of a depiction of Dante's \textit{Inferno} — is described as, ``A whimsical plaything'' within the operating systems own manual; a description that I am in complete agreeance with.
+    
 \end{document}
