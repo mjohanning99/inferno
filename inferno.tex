@@ -599,8 +599,21 @@ Thereafter we include two of the aforementioned libraries to aid us in creating 
 
 \lstinputlisting{code-snippets/sys.m}
 
-One of the most important functions of a Hello World program is, rather obviously, the printing of ``Hello, World!'' onto the screen and this functionality is located within \texttt{sys.m}. The \texttt{print} function is declared therein and it takes a string as its argument — a string is a sequence of letters and symbols, such as ``Hello'' —, however, in addition to taking a string as its argument, it may take other types of data as well, as indicated by the star. One may also observe the declaration of the \texttt{PATH} constant (\texttt{con}) — a type of data that cannot be altered, unlike a variable —, to which the value of \texttt{"\$Sys"} is given; we shall be referring to this again shortly.
+One of the most important functions of a Hello World program is, rather obviously, the printing of ``Hello, World!'' onto the screen and this functionality is located within \texttt{sys.m}. The \texttt{print} function is declared therein and it takes a string as its argument — a string is a sequence of letters and symbols, such as ``Hello'' —, however, in addition to taking a string as its argument, it may take other types of data as well, as indicated by the star. One may also observe the declaration of the \texttt{PATH} constant (\texttt{con}) — a type of data that cannot be altered, unlike a variable —, to which the value of \texttt{"\$Sys"} has been assigned; we shall be referring to this again shortly.A
 
+Line four of our Hello World program contains the definition of a variable, namely \texttt{sys}; declaring a variable — or, for that matter, functions and other declarable parts of this programming language — adheres to the following formula, wherein \texttt{DATA} must be replaced by what the variable shall store: —
+
+\begin{lstlisting}
+  variableName: VariableType DATA;
+\end{lstlisting}
+
+Thus, if you wished to store the ``Hello, World!'' text within a constant, you could alter the previous program as follows: —
+
+\lstinputlisting{code-snippets/hello_world_var.b}
+
+We thus declared that \texttt{text} shall be retaining data of the \texttt{con} type with the content of \texttt{"Hello, World!\textbackslash n"} which is then printed using the \texttt{print} function from the \texttt{sys.m} library.
+
+Let us return, however, to the tenth line of our original code, whereon we find the module declaration; which, I sincerely hope you recall, is what would typically be located in its separate \texttt{.m} file — this has, however, been ignored here, for it is unnecessary to split the program, as it us but a mere seventeen lines long — indeed, splitting programs whose scale is as minor as this may actually be detremental and induce confusion; this is, without a doubt, especially noticable with those people who are new to the language and, perhaps, even novices regarding comuputer programming in general.
 \newpage
 %%%%%%%%%% Appendix %%%%%%%%%%
 \thispagestyle{empty}
