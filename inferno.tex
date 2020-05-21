@@ -97,13 +97,18 @@
 
 \noindent© 2020 by Marvin Johanning\\``The Inferno Adventures: Inspecting the Inferno Operating System'' by Marvin Johanning is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit https://creativecom\\mons.org/licenses/by-nc-sa/4.0.
 
-\vspace{20mm}\noindent\textsc{Publishing}: \\
+\vspace{10mm}\noindent
+Inferno® and Limbo® are registered trademarks of Vita Nuova Holdings Limited in the USA and other countries, and in the European Union.\\
+Inferno OS™ is a trademark of Vita Nuova Holdings Limited in the USA and other countries, and in the European Union.\\
+Dis® is a registered trademark of Vita Nuova Holdings Limited in the United Kingdom, the USA and other countries.\\
+
+\vspace{10mm}\noindent\textsc{Publishing}: \\
 Marvin Johanning\\
 Salzufler Str. 66\\
 33719 Bielefeld\\
 info@marvinjohanning.de
 
-\vspace{25mm}\noindent\textsc{Printing}: epubli – ein Service der neopubli GmbH, Berlin
+\vspace{5mm}\noindent\textsc{Printing}: epubli – ein Service der neopubli GmbH, Berlin
 \newpage
 
 %%%%%%%%%% Introductory quote %%%%%%%%%%
@@ -275,11 +280,8 @@ Having gained access to such a powerful tool, we must return to our Inferno inst
 The first command that must be run is \texttt{sudo mk nuke} — just a reminder of what is to come; for if we must nuke something, this surely cannot be a system of good. Running this command will erase files which are not necessary for us; thereupon we may begin the actual installation.
 
 Finally, the time has come for us to install Inferno; the final command that will push open the gates that shall unveil the long-forgotten mystery of Inferno — \texttt{sudo mk install}; but first, you must wait, for this may take some time, depending on how powerful of machine you own.
-\newpage
 
-\thispagestyle{empty}
-  \mbox{}
-  \newpage
+\newpage
 
 \part*{Book II}
   \thispagestyle{empty}
@@ -522,13 +524,7 @@ Finally, the time has come for us to install Inferno; the final command that wil
   
   Another program I found to be of much use is the rather simplistic, yet quite convenient, \textit{Colours} — although it appears Inferno is undecisive regarding the spelling of this word, for the title bar thereof reads \textit{Colors}, whereas the start menu entry uses the much superior British English spelling of \textit{Colours} — which allows one to choose a colour of one's liking, whereupon one is shown said colour's value in RGB and Hex. Yet, I must admit, the colours appear to have been arranged in a most peculiar fashion, with no discernible logic therebehind.
 
-  Herewith we shall conclude this section, for the remaining programs — of which, I must add, there are but a small amount — are not worthy a mention herein, as they are rather ordinary; examining these in-depth would be of but little use. Instead, I believe we may henceforth begin with the study  of the rather alluring Limbo programming language.
-
-  \newpage
-  
-\thispagestyle{empty}
-  \mbox{}
-  \newpage
+  Herewith we shall conclude this section, for the remaining programs — of which, I must add, there are but a small amount — are not worthy a mention herein, as they are rather ordinary; examining these in-depth would be of but little use. Instead, I believe we may henceforth begin with the study  of the rather alluring Limbo programming language.  \newpage
 
 \part*{Book III}
   \markboth{Book III}{Book III}
@@ -599,7 +595,7 @@ Thereafter we include two of the aforementioned libraries to aid us in creating 
 
 \lstinputlisting{code-snippets/sys.m}
 
-One of the most important functions of a Hello World program is, rather obviously, the printing of ``Hello, World!'' onto the screen and this functionality is located within \texttt{sys.m}. The \texttt{print} function is declared therein and it takes a string as its argument — a string is a sequence of letters and symbols, such as ``Hello'' —, however, in addition to taking a string as its argument, it may take other types of data as well, as indicated by the star. One may also observe the declaration of the \texttt{PATH} constant (\texttt{con}) — a type of data that cannot be altered, unlike a variable —, to which the value of \texttt{"\$Sys"} has been assigned; we shall be referring to this again shortly.A
+One of the most important functions of a Hello World program is, rather obviously, the printing of ``Hello, World!'' onto the screen and this functionality is located within \texttt{sys.m}. The \texttt{print} function is declared therein and it takes a string as its argument — a string is a sequence of letters and symbols, such as ``Hello'' —, however, in addition to taking a string as its argument, it may take other types of data as well, as indicated by the star. One may also observe the declaration of the \texttt{PATH} constant (\texttt{con}) — a type of data that cannot be altered, unlike a variable —, to which the value of \texttt{"\$Sys"} has been assigned; we shall be referring to this again shortly.
 
 Line four of our Hello World program contains the definition of a variable, namely \texttt{sys}; declaring a variable — or, for that matter, functions and other declarable parts of this programming language — adheres to the following formula, wherein \texttt{DATA} must be replaced by what the variable shall store: —
 
@@ -613,12 +609,34 @@ Thus, if you wished to store the ``Hello, World!'' text within a constant, you c
 
 We thus declared that \texttt{text} shall be retaining data of the \texttt{con} type with the content of \texttt{"Hello, World!\textbackslash n"} which is then printed using the \texttt{print} function from the \texttt{sys.m} library.
 
-Let us return, however, to the tenth line of our original code, whereon we find the module declaration; which, I sincerely hope you recall, is what would typically be located in its separate \texttt{.m} file — this has, however, been ignored here, for it is unnecessary to split the program, as it us but a mere seventeen lines long — indeed, splitting programs whose scale is as minor as this may actually be detremental and induce confusion; this is, without a doubt, especially noticable with those people who are new to the language and, perhaps, even novices regarding comuputer programming in general.
+Let us return, however, to the tenth line of our original code, whereon we find the module declaration; which, I sincerely hope you recall, is what would typically be located in its separate \texttt{.m} file — this has, however, been ignored here, for it is unnecessary to split the program, as it us but a mere seventeen lines long — indeed, splitting programs whose scale is as minor as this may actually be detremental and induce confusion; this is, without a doubt, especially noticable with those people who are new to the language and, perhaps, even novices regarding computer programming in general. If, however, you longed to create a separate file for your declaration, you would be required to include it as you did the others as well, by adding a third \texttt{include} statement at the top as follows, wherein \texttt{module\_file\_name} must be replaced by the actual file name you gave the declaration file: —
+
+\begin{lstlisting}
+  include "module_file_name.m";
+\end{lstlisting}
+
+The declaration spans three lines in total, namely nine through eleven and is akin to what one may witness in programs written in programming languages such as \textit{Java} or \textit{C}, for those require the creation of a \texttt{main} method, which operates in a similar manner to the \texttt{init} function created within our Hello World program; in Java, it may be written as follows: —
+
+\lstinputlisting{code-snippets/main_function.java}
+
+One is immediately able to spot the similarities, for the second line of this code snippet serves a function identical to the tenth line of our Limbo program — or rather, almost identical, for in Java, there is no need for a separate declaration as is the case in Limbo. Thus, in Limbo, we are required to both declare and thereafter execute our \texttt{init} function, which one may see from line thirteen onwards, for therein the \textit{init} function is exectued; and in there, the code that will be run can encountered.
+
+Should you be unfamiliar with the different types of brackets that are used, I shall attempt to briefly explain the difference between them; let us thus consider merely lines thirteen and seventeen: —
+
+\begin{lstlisting}
+init(ctxt: ref Draw->Context, args: list of string) {
+  #...
+}
+\end{lstlisting}
+
+Everything placed inbetween the round brackets is seen as an argument which can be passed to the function, whereas the code placed between curly brackets is the so-called \textit{body} of the function; if you, for example, wished to create a function that greets people you may do so as follows: —
+
+\lstinputlisting{code-snippets/greet_function.b}
+
+Herein, we created a new function to which the name \texttt{greet} has been appointed; and, as one may hopefully observe, located within the round brackets the argument it can be passed is to be seen, namely a string which will thence be saved under the \texttt{myname} variable.
+
 \newpage
 %%%%%%%%%% Appendix %%%%%%%%%%
-\thispagestyle{empty}
-  \mbox{}
-  \newpage
 
 \part*{Appendix}
   \markboth{Appendix}{Appendix}
