@@ -585,6 +585,22 @@ Indeed, we shall henceforth escape from Limbo; from the \textit{edge of Hell} it
 
 I shall herein intermittently refer to the previously discussed code snippet and the numbers printed beside each line; I therefore highly urge you to bookmark page \pageref{hello-world}, so that you may open the code at a moment's notice.
 
+The code begins with a comment, a piece of text that the program will ignore and whose sole purpose it is to provide some information to those who read the source code; the comment here is merely stating that the file's name is \texttt{hello\_world.b}. To indicate that a piece of text or code is a comment, one must use the pound (\#) symbol, whereafter the line it is located on will be ignored by the compiler.
+
+\begin{wrapfigure}{L}{0.55\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{imgs/modules.png}
+  \caption{The included libraries}
+\end{wrapfigure}
+
+The first actual piece of code is located on line 3, whereon the current file is marked as being the implemtnation of the \texttt{HelloWorld} module, the name of which can be chosen by the programmer. You may have also observed the semi-colon at the end of this line and it serves a very crucial function; for if you forget the semi-colon, the program will not compile and instead yield the following error: \texttt{hello\_world.b:3: near ' include ' : syntax error}. You may wonder why this occurs and the answer is rather straightforward: one must add a semi-colon behind every statement; this can be easily forgotten, especially in the beginning, and can quite easily lead to frustration, especially in longer programs — therefore, take heed, for you surely do not wish your program to throw errors at you, which then requires you to scour the file for a missing semi-colon.
+
+Thereafter we include two of the aforementioned libraries to aid us in creating this program, namely \texttt{Sys} and \texttt{Draw}. Should you wish to view these modules' code, you can do so by opening the directory wherein your inferno location is located — which, in my case, is \texttt{/usr/local/inferno} — and thereafter open the \texttt{modules} directory within. Placed therein are the libraries one can readily load, including both \texttt{draw.m} and \texttt{sys.m}; as \texttt{draw.m} is not actually needed within our Hello World program, we must merely open \texttt{sys.m}, wherein we can find a large number of lines, each providing a different functionality. Let us glance briefly at the parts we have used in the creation of the Hello World program: —
+
+\lstinputlisting{code-snippets/sys.m}
+
+One of the most important functions of a Hello World program is, rather obviously, the printing of ``Hello, World!'' onto the screen and this functionality is located within \texttt{sys.m}. The \texttt{print} function is declared therein and it takes a string as its argument — a string is a sequence of letters and symbols, such as ``Hello'' —, however, in addition to taking a string as its argument, it may take other types of data as well, as indicated by the star. One may also observe the declaration of the \texttt{PATH} constant (\texttt{con}) — a type of data that cannot be altered, unlike a variable —, to which the value of \texttt{"\$Sys"} is given; we shall be referring to this again shortly.
+
 \newpage
 %%%%%%%%%% Appendix %%%%%%%%%%
 \thispagestyle{empty}

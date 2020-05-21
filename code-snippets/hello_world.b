@@ -3,9 +3,8 @@
 implement HelloWorld;
 
 include "sys.m";
-    sys: Sys;
-
 include "draw.m";
+sys: Sys;
 
 HelloWorld: module {
   init:   fn(ctxt: ref Draw->Context, args: list of string);
