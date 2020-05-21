@@ -19,6 +19,8 @@
 \usepackage{titling} 
 \usepackage[T1]{fontenc}
 \usepackage{bold-extra}
+\usepackage{listings}
+\usepackage{xcolor}
 \makeindex
 
 \newlength\longest
@@ -30,6 +32,23 @@
 {\thesection.}{0.5em}{}
 \titlespacing{\section}{12pc}{1.5ex plus .1ex minus .2ex}{1pc}
 
+\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+      backgroundcolor=\color{backcolor},
+      basicstyle=\ttfamily\footnotesize,
+      breakatwhitespace=false,         
+      breaklines=true,                 
+      captionpos=b,                    
+      keepspaces=true,                 
+      numbers=left,                    
+      numbersep=5pt,                  
+      showspaces=false,                
+      showstringspaces=false,
+      showtabs=false,                  
+      tabsize=2
+}
+\lstset{style=mystyle}
 %%%%%%%%%% Fancy HDR %%%%%%%%%%
 \pagestyle{fancy}
 \fancyhf{}
@@ -37,10 +56,10 @@
 \fancyhead[LO]{\nouppercase{\leftmark}}
 \fancyhead[RE]{\textsc{The Inferno Adventures}}
 \fancypagestyle{plain}{
-  \fancyhf{} 
-  \fancyhead[LE,RO]{\thepage}
-  \fancyhead[LO]{\leftmark}
-  \fancyhead[RE]{\textsc{The Inferno Adventures}}}
+\fancyhf{} 
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\textsc{The Inferno Adventures}}}
 
 \begin{document}
 \pagenumbering{gobble} 
@@ -63,9 +82,9 @@
   \begin{center}
     \textit{Inspecting the Inferno Operating System}
   \end{center}
-  \author{By Marvin Johanning}
-  \date{}
 }
+\author{By Marvin Johanning}
+\date{}
 \maketitle
 
 %%%%%%%%%% Copyright and Impressum %%%%%%%%%%
@@ -121,7 +140,7 @@ It is however to be noted that this is not meant to be a complete introduction t
 
 Additionally, should you want further information regarding this operating system, I do promote the reading of the \textit{Addendum}, wherein you will find supplementary information I found unfit for the main portion of this work or which I became aware of only after having finished the main work. In addition to that, the \textit{Further Reading} section will provide you with a list of texts which can be used to delve deeper into this interesting topic.
 
-I highly encourage to to critisise my work — this is, obviously, without having to result to petty insults and the like — and send me an email with your feedback. It is not unlikely that I have made a mistake — or perhaps even several — over the course of this document and I always like to be corrected if there are factual, grammatical or spelling errors.
+I highly encourage to to criticise my work — this is, obviously, without having to result to petty insults and the like — and send me an email with your feedback. It is not unlikely that I have made a mistake — or perhaps even several — over the course of this document and I always like to be corrected if there are factual, grammatical or spelling errors.
 
 This work is licensed under a Creative Commons license, which means you are allowed to share it with others free of charge and I do encourage you to do so; you should never have to pay for this document in a digital format and I would like you to report any such occurences to me, since commercial distribution is strictly prohibited by the license and those who make a profit from it are in violation of it. Physical copies can be obtained solely from me, at least commercially. 
 
@@ -524,19 +543,49 @@ Finally, the time has come for us to install Inferno; the final command that wil
   \markboth{Adrift in Limbo}{Adrift in Limbo}
   \addcontentsline{toc}{chapter}{Adrift in Limbo}
 
-\epigraph{``Have you ever wondered what language they speak in Limbo?.''}{\textit{Lee T. Gallup}}
+\epigraph{``Have you ever wondered what language they speak in Limbo?''}{\textit{Lee T. Gallup}}
 
-Upon having unveiled the mysteries behind this fascinating operating system, I believe it is time to shortly investigate the intricacies behind the programming language it has been written in — Limbo; truly, the name, once more, appears to have been derived from Dante's works — a matter I should not be too astonished over — and bears strong resemblance to the language used in the creation of the Unix system, namely \textit{C}. 
+We have trot upon foreign ground, onto the lands of a country unknown — Let us being studying its language. Thus, I believe it is time to shortly investigate the intricacies behind the programming language this operating system has been written in and wherewith one may create one's own programs for it — Limbo; truly, the name, once more, appears to have been derived from Dante's works — a matter I should not be too astonished over — and bears strong resemblance to the language used in the creation of the Unix system, namely \textit{C}. 
 
 Unfortunately, I must admit with great sorrow, I am but a mere novice regarding this intriguing programming language; indeed, I have but very little knowledge of the C programming language either. Therefore, I found it pertinent to add this disclaimer here, as the forthcoming examples may not have been written or explained in the best of manners and I hence urge you to consider the study of a book dedicated solely to the topic of programming if you wish to learn more than but the simplest of aspects of this language.
 
 Nevertheless, I shall herein attempt to teach you the very basics of this programming language so that, should you wish to continue your study of it, you will not dive into a more advanced book without any prior knowledge; this, I dearly hope, will greatly decrease the burden of attempting to read a more advanced book on this subject and thenceforth ease your journey in becoming more knowledgable.
 
-Additionally, I shall be henceforth assume that you possess a very elemental understanding of computer programming; nonetheless, I strive to write everything in a way that even a layman may grasp the majority of the subject by attempting to unravel terms and concepts that may not be known to a large portion of the population.
+Additionally, I shall be henceforth assume that you possess a very elemental understanding of computer programming; nonetheless, I strive to write everything in a way that even a layman may grasp the majority of the subject by attempting to unravel terms and concepts that may not be known to a large portion of the population. Please be aware, however, that to follow the upcoming chapter properly, you will require a working Inferno installation; it is possible to simply read along — I shall provide everything that is necessary to follow this chapter without the need to have Inferno installed —, yet it would be beneficial to follow along and experiment with the code yourself.
 
-Lastly, I greatly encourage you to glance at the \textit{Further Reading} section of this book, for therein you shall be presented with my personal recommendations for furthering your wisdom regarding both the operating system and the programming language wherewith it was forged. \newpage
+Lastly, I greatly encourage you to glance at the \textit{Further Reading} section of this book, for therein you shall be presented with my personal recommendations for furthering your wisdom regarding both the operating system and the programming language wherewith it was forged.
 
+Firstly, it is paramount to understand a Limbo program's underlying structure, for it may differ somewhat from other programming languages; yet, Limbo's syntax reminds me greatly of that of the C programming language — whereof, I believe, it was inspired. Nevertheless, there are a number of differences — for, otherwise, it would be but a mere clone of C and not a new language altogether — and should you know C, you may find a large amount of the upcoming code familiar, yet alien at the same time.
 
+Program's written in Limbo are comprised of \textit{modules} which connect with one another to perform tasks. Each module is further partitioned into two separate entities — every one thereof having their own, distinct function — namely the \textit{module implementation} and the \textit{module declaration}, which customarily reside in their own, distinct file; the module declaration being stored inside an \texttt{.m} file and the module implementation in a \texttt{.b} file. Typically, having an entire module be stored within just one file should be avoided for anything but the simplest of programs. 
+
+The module declaration contains the functions and constants that are to be made publicly available, whereafter other modules may access them with ease; the implementation contains the actual code to be executed and is thus, generally, the file comprised of the largest amount of lines. A module is not required to have but one mere implementation and frequently possesses several, each stored inside their own \texttt{.b} file.
+
+Additionally, Limbo's ability can be greatly enhanced with the help of \textit{libraries}, whereof a small number of vital ones have been included within the Inferno kernel, such as \textit{Sys}, providing system-related functions, such as \texttt{print}, wherewith one may print text onto the screen; and \textit{Draw} and \textit{Tk} which may be used to create graphical interfaces. Additional libraries can be loaded to further increase the capabilities of Limbo and add features that would otherwise be much to arduous to program oneself.
+
+Let us look at a program written by the majority of programmers when they begin their study of a particular programming language, a \textit{Hello World} program; its intent is to simply print the words \textit{Hello World} on screen. To do so, create a new file titled \texttt{hello\_world.b} and add the following contents: —
+\label{hello-world}
+\lstinputlisting{code-snippets/hello_world.b}
+  \begin{wrapfigure}{L}{0.55\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{imgs/hello-world.png}
+    \caption{The Hello World program}
+  \end{wrapfigure}
+
+You may use the previously discussed Edit or Acme programs to create and save this file directly within Inferno itself, whereupon you may save it and open a new shell; therein you must find the directory whence your program has gone and type the following command \texttt{limbo -g hello\_world.g}. Thereupon, a new file will be constructed simply titled \texttt{hello\_world} and to execute it you must type \texttt{hello\_world} into the shell window; you shall then be greeted by a ``Hello, World!''.
+
+We shall now begin examining each line of this program separately, so that we may comprehend how this intriguing language functions; for merely copying and pasting a program's code will not allow us to fully — or, indeed, at all — grasp its underlying structure.\newpage
+
+\chapter*{Deliverance from Limbo}
+  \markboth{Deliverance from Limbo}{Deliverance from Limbo}
+  \addcontentsline{toc}{chapter}{Deliverance from Limbo}
+\epigraph{``From there we came outside and saw the stars''}{\textit{Dante Alighieri\\The Divine Comedy, \\Inferno}}
+
+Indeed, we shall henceforth escape from Limbo; from the \textit{edge of Hell} itself and ascend to higher grounds; and we shall do so by furthering our knowledge of Limbo itself, for understanding something frequently yields the knowledge that things are not as complex as they may appear.
+
+I shall herein intermittently refer to the previously discussed code snippet and the numbers printed beside each line; I therefore highly urge you to bookmark page \pageref{hello-world}, so that you may open the code at a moment's notice.
+
+\newpage
 %%%%%%%%%% Appendix %%%%%%%%%%
 \thispagestyle{empty}
   \mbox{}
