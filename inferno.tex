@@ -21,8 +21,10 @@
 \usepackage{bold-extra}
 \usepackage{listings}
 \usepackage{xcolor}
+%\usepackage{draftwatermark}
 \makeindex
 
+% \SetWatermarkText{Draft}
 \newlength\longest
 \setlength{\marginparwidth}{0pt}
 \setlength{\headheight}{15pt}
@@ -138,6 +140,8 @@ info@marvinjohanning.de
   \markboth{Introduction}{Introduction}
   \addcontentsline{toc}{chapter}{Introduction}
 In the following document you will be presented with some information regarding the Inferno operating system created by Bell Labs in the mid 1990s. Its name and somewhat mysterious aura led me to write it in a style akin to the one that can be seen in older books, such as those from the early 20th or late 19th centuries. This applies to both the chapter headings, as well as the text itself.
+
+Furthermore, a rudimentary study of the Limbo programming language is also included, wherein I attempt to explain its basics in an manner which I hope will be easy to understand even if you do not have a lot of programming experience.
 
 I believe that this may also make reading it somewhat more enjoyable than the otherwise rather dryly written literature available on this subject and perhaps help those who are interested in this operating system — and that may possibly not know much about Linux itself either — can have an interestingly written introduction.
 
@@ -654,6 +658,14 @@ Hence, we can utilise \texttt{sys.m}'s inbuilt \texttt{PATH} constant — as we 
 
 Thenceforth, the \texttt{sys} variable will be in the possession of a \texttt{Sys} instance, whereupon we may use it to access \texttt{sys.m} in-built functions, which will be needed on line 16, whereon we refer to the \texttt{print} function of \texttt{Sys}. This particular function, as we ascertained previously, takes a string as its argument, which we here supply as \texttt{"Hello, World!"}. The trailing \texttt{\textbackslash n} is not printed verbatim, as it is a so-called \textit{escape character}, which, in this instance, creates a new line; had this been left out, our printed text would appear in a rather inept position, behind the \texttt{\%} symbol of our shell instead of being located on its own line.
 
+Upon having analysed the Hello World program, let us continue by learning about functions a bit more in detail; thus, in the following section, we will be creating functions capable of performing certain mathematical operations and returning their result; additionally, we shall be studying the differences between the a small number of different data types that can be found in Limbo. 
+
+\newpage
+
+\chapter*{Mathematical Inquiries}
+  \markboth{Mathematical Inquiries}{Mathematical Inquiries}
+  \addcontentsline{toc}{chapter}{Mathematical Inquiries}
+\epigraph{``All truths are easy to understand once they are discovered; the point is to discover them''}{\textit{Galileo Galilei}}
 
 \newpage
 %%%%%%%%%% Appendix %%%%%%%%%%
