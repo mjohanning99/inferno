@@ -593,6 +593,7 @@ The first actual piece of code is located on line 3, whereon the current file is
 
 Thereafter we include two of the aforementioned libraries to aid us in creating this program, namely \texttt{Sys} and \texttt{Draw}. Should you wish to view these modules' code, you can do so by opening the directory wherein your inferno location is located — which, in my case, is \texttt{/usr/local/inferno} — and thereafter open the \texttt{modules} directory within. Placed therein are the libraries one can readily load, including both \texttt{draw.m} and \texttt{sys.m}; as \texttt{draw.m} is not actually needed within our Hello World program, we must merely open \texttt{sys.m}, wherein we can find a large number of lines, each providing a different functionality. Let us glance briefly at the parts we have used in the creation of the Hello World program: —
 
+\label{sys.m}
 \lstinputlisting{code-snippets/sys.m}
 
 One of the most important functions of a Hello World program is, rather obviously, the printing of ``Hello, World!'' onto the screen and this functionality is located within \texttt{sys.m}. The \texttt{print} function is declared therein and it takes a string as its argument — a string is a sequence of letters and symbols, such as ``Hello'' —, however, in addition to taking a string as its argument, it may take other types of data as well, as indicated by the star. One may also observe the declaration of the \texttt{PATH} constant (\texttt{con}) — a type of data that cannot be altered, unlike a variable —, to which the value of \texttt{"\$Sys"} has been assigned; we shall be referring to this again shortly.
@@ -621,7 +622,7 @@ The declaration spans three lines in total, namely nine through eleven and is ak
 
 One is immediately able to spot the similarities, for the second line of this code snippet serves a function identical to the tenth line of our Limbo program — or rather, almost identical, for in Java, there is no need for a separate declaration as is the case in Limbo. Thus, in Limbo, we are required to both declare and thereafter execute our \texttt{init} function, which one may see from line thirteen onwards, for therein the \textit{init} function is exectued; and in there, the code that will be run can encountered.
 
-Should you be unfamiliar with the different types of brackets that are used, I shall attempt to briefly explain the difference between them; let us thus consider merely lines thirteen and seventeen: —
+Should you be unfamiliar with the different types of brackets that are used — or, indeed, the structure and syntax of functions altogether —, I shall attempt to briefly explain the difference between them; let us thus consider merely lines thirteen and seventeen: —
 
 \begin{lstlisting}
 init(ctxt: ref Draw->Context, args: list of string) {
@@ -633,7 +634,26 @@ Everything placed inbetween the round brackets is seen as an argument which can 
 
 \lstinputlisting{code-snippets/greet_function.b}
 
-Herein, we created a new function to which the name \texttt{greet} has been appointed; and, as one may hopefully observe, located within the round brackets the argument it can be passed is to be seen, namely a string which will thence be saved under the \texttt{myname} variable.
+Herein, we created a new function to which the name \texttt{greet} has been appointed; and, as one may hopefully observe, located within the round brackets, the argument one may pass to it is to be seen, namely a string which will thence be saved under the \texttt{myname} variable.
+
+Enclosed by curly brackets, however, the aforementioned function \textit{body} can be found, wherein the actual code is situated; in this particular instance, the function's purpose is to return \texttt{"Hello " + myname + "\textbackslash n"}, wherein \texttt{myname} will be replaced by the string passed onto the function.
+
+The function is executed on line 21, placed within the \texttt{print} statement, where it is run with the \texttt{"Marvin"} argument, whereupon the function's output — i.e. \texttt{"Hello Marvin\textbackslash n} — is printed onto the user's screen.
+
+Let us hence return from this minor divergence and continue on our path towards understanding our Hello World program. Having briefly touched upon the subject of functions, we shall thus begin the dissection of lines 14 and 16, respectively; the statement on line 14 may come across as rather bizarre at first glance: —
+
+\begin{lstlisting}
+sys = load Sys Sys->PATH
+\end{lstlisting}
+
+Yet, as we have learnt, things frequently but appear to be difficult, whereas, in reality, they can be explained and understood swiftly. 
+
+If you recall, on line 7 of our Hello World program, a new variable, namely \texttt{sys}, was created without any contents; the contents are what will be added here. Indeed, we may have included \texttt{sys.m} at the top of our program, but we have not yet created an instance of it — for now it but eagerly awaits to be used. Thus, to create such an instance, we are required to load \texttt{Sys} from where it is located and thereafter store this instance within a variable — which, in this case, is \texttt{sys}. To load such an instance, the syntax \texttt{load module module\\\_path} is used.
+
+Hence, we can utilise \texttt{sys.m}'s inbuilt \texttt{PATH} constant — as we saw on page \pageref{sys.m} — by simply referencing it using an arrow thusly: \texttt{Sys->PATH}; this is the syntax we are required to use whenever we wish to refer to a constant or function within a different module.
+
+Thenceforth, the \texttt{sys} variable will be in the possession of a \texttt{Sys} instance, whereupon we may use it to access \texttt{sys.m} in-built functions, which will be needed on line 16, whereon we refer to the \texttt{print} function of \texttt{Sys}.
+
 
 \newpage
 %%%%%%%%%% Appendix %%%%%%%%%%
