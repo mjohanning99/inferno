@@ -667,7 +667,19 @@ Upon having analysed the Hello World program, let us continue by learning about 
   \addcontentsline{toc}{chapter}{Mathematical Inquiries}
 \epigraph{``All truths are easy to understand once they are discovered; the point is to discover them''}{\textit{Galileo Galilei}}
 
+As we have previously witnessed, one may specify which type of data a particular constant or variable is able to store, such as the \texttt{string} type — used to store an aggregation of characters and even numbers — which thence is treated as mere text. Using this type of data is beneficial for text which is suppposed to be shown on screen, yet it is ineffective when used to perform mathematical tasks, such as the substraction or addition of two numbers. Let us inspect the following example: —
+
+\lstinputlisting{code-snippets/string-addition.b}
+
+Herein, two constants, namely \texttt{num1} and \texttt{num2}, have been defined, each containing a number placed inside quotation marks; hence, both of these are, in actuality, strings. This, in turn, implies that Limbo does not treat them as numbers per se; nay, instead, they get treated as text, which is why the \texttt{print} statement outputs \textit{12} instead of \textit{3}. 
+
+Thus, it is to be remarked, the \texttt{+} operator situated within the \texttt{print} statement does not perform a mathematical function in this particular instance, as its function is altered when applied to strings; for there, the operator functions as a \textit{concatenator} of sorts, simply joining two pieces of text with one another. If we wished to add numbers and receive an accurate mathematical result, we must use \textit{integers} instead; and, if we desired, we could simply create a new functioned titled \texttt{add}, whose sole purpose it is to take two numbers which we supply, add them together and return the result. Such a program could be written as follows: —
+
+\lstinputlisting{code-snippets/plus-function.b}
+
 \newpage
+\thispagestyle{empty}
+  \mbox{}
 %%%%%%%%%% Appendix %%%%%%%%%%
 
 \part*{Appendix}
