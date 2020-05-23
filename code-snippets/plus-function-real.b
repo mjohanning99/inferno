@@ -1,20 +1,19 @@
-# plus-function.b
-implement IntAddition;
+implement RealAddition;
 
 include "sys.m";
 include "draw.m";
 sys: Sys;
 
-IntAddition: module {
+RealAddition: module {
 	init:   fn(ctxt: ref Draw->Context, args: list of string);
 };
 
-add: fn(num1: int, num2: int): int;
-add(num1: int, num2: int): int {
+add: fn(num1: real, num2: real): real;
+add(num1: real, num2: real): real {
 	return num1 + num2;
 }
 
 init (ctxt: ref Draw->Context, args: list of string) {
 	sys = load Sys Sys->PATH;
-	sys->print("%d", add(2, 4));
+	sys->print("%f", add(2.2, 4.0));
 }

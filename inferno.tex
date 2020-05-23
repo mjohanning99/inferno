@@ -139,7 +139,7 @@ info@marvinjohanning.de
 \chapter*{Introduction}
   \markboth{Introduction}{Introduction}
   \addcontentsline{toc}{chapter}{Introduction}
-In the following document you will be presented with some information regarding the Inferno operating system created by Bell Labs in the mid 1990s. Its name and somewhat mysterious aura led me to write it in a style akin to the one that can be seen in older books, such as those from the early 20th or late 19th centuries. This applies to both the chapter headings, as well as the text itself.
+In the following book you will be presented with some information regarding the Inferno operating system created by Bell Labs in the mid 1990s. Its name and somewhat mysterious aura led me to write it in a style akin to the one that can be seen in older books, such as those from the early 20th or late 19th centuries. This applies to both the chapter headings, as well as the text itself.
 
 Furthermore, a rudimentary study of the Limbo programming language is also included, wherein I attempt to explain its basics in an manner which I hope will be easy to understand even if you do not have a lot of programming experience.
 
@@ -557,7 +557,7 @@ Lastly, I greatly encourage you to glance at the \textit{Further Reading} sectio
 
 Firstly, it is paramount to understand a Limbo program's underlying structure, for it may differ somewhat from other programming languages; yet, Limbo's syntax reminds me greatly of that of the C programming language — whereof, I believe, it was inspired. Nevertheless, there are a number of differences — for, otherwise, it would be but a mere clone of C and not a new language altogether — and should you know C, you may find a large amount of the upcoming code familiar, yet alien at the same time.
 
-Program's written in Limbo are comprised of \textit{modules} which connect with one another to perform tasks. Each module is further partitioned into two separate entities — every one thereof having their own, distinct function — namely the \textit{module implementation} and the \textit{module declaration}, which customarily reside in their own, distinct file; the module declaration being stored inside an \texttt{.m} file and the module implementation in a \texttt{.b} file. Typically, having an entire module be stored within just one file should be avoided for anything but the simplest of programs. 
+Programs written in Limbo are comprised of \textit{modules} which connect with one another to perform tasks. Each module is further partitioned into two separate entities, every one thereof having their own, distinct function, namely the \textit{module implementation} and the \textit{module declaration}, which customarily reside in their own, distinct file; the module declaration being stored inside an \texttt{.m} file and the module implementation in a \texttt{.b} file. Typically, having an entire module be stored within just one file should be avoided for anything but the simplest of programs. 
 
 The module declaration contains the functions and constants that are to be made publicly available, whereafter other modules may access them with ease; the implementation contains the actual code to be executed and is thus, generally, the file comprised of the largest amount of lines. A module is not required to have but one mere implementation and frequently possesses several, each stored inside their own \texttt{.b} file.
 
@@ -667,15 +667,51 @@ Upon having analysed the Hello World program, let us continue by learning about 
   \addcontentsline{toc}{chapter}{Mathematical Inquiries}
 \epigraph{``All truths are easy to understand once they are discovered; the point is to discover them''}{\textit{Galileo Galilei}}
 
-As we have previously witnessed, one may specify which type of data a particular constant or variable is able to store, such as the \texttt{string} type — used to store an aggregation of characters and even numbers — which thence is treated as mere text. Using this type of data is beneficial for text which is suppposed to be shown on screen, yet it is ineffective when used to perform mathematical tasks, such as the substraction or addition of two numbers. Let us inspect the following example: —
+As we have previously witnessed, one may specify which type of data a particular constant or variable is able to store, such as the \texttt{string} type — used to store an aggregation of characters and even numbers — which thence is treated as mere text. Using this type of data is beneficial for text which is to be printed onto the screen or for storing names and addresses, yet it is ineffective for mathematical tasks, such as the substraction or addition of two numbers. Let us inspect the following example: —
 
 \lstinputlisting{code-snippets/string-addition.b}
 
 Herein, two constants, namely \texttt{num1} and \texttt{num2}, have been defined, each containing a number placed inside quotation marks; hence, both of these are, in actuality, strings. This, in turn, implies that Limbo does not treat them as numbers per se; nay, instead, they get treated as text, which is why the \texttt{print} statement outputs \textit{12} instead of \textit{3}. 
 
-Thus, it is to be remarked, the \texttt{+} operator situated within the \texttt{print} statement does not perform a mathematical function in this particular instance, as its function is altered when applied to strings; for there, the operator functions as a \textit{concatenator} of sorts, simply joining two pieces of text with one another. If we wished to add numbers and receive an accurate mathematical result, we must use \textit{integers} instead; and, if we desired, we could simply create a new functioned titled \texttt{add}, whose sole purpose it is to take two numbers which we supply, add them together and return the result. Such a program could be written as follows: —
+Thus, it is to be remarked, the \texttt{+} operator situated within the \texttt{print} statement does not perform a mathematical function in this particular instance, as its function is altered when applied to strings; for there, the operator functions as a \textit{concatenator} of sorts, simply joining two pieces of text with one another. If we wished to add numbers and receive an accurate mathematical result, we must use \textit{integers} — or, indeed, other type of numbers — instead; and, if we desired, we could simply create a new function titled \texttt{add}, whose sole purpose it is to accept two integers as its arguments, add them together and return the result. Such a program could be written as follows: —
 
 \lstinputlisting{code-snippets/plus-function.b}
+
+Line 12 of this piece of code contains the declaration of the \texttt{add} function, taking two integers as its arguments and returning but one integer, namely the sum of the addition. In Limbo, it is imperative to declare the type of data a function may return; this is wherefore the \texttt{: int;} part is to be found at the end of the function declaration. The previously studied \texttt{greet} function, too, contained such a statement; therein, however, it is supposed to return a string instead of an integer, for the name of a person cannot be stored within an integer. 
+
+An integer, should you be unfamiliar with this terminology, is a \textit{whole number}, id est a number which one can depict without the usage of a fractional component; an example of a number with a fractional component would be \textit{2.2}. Therefore, should you supply the newly created \texttt{add} function with a number containing fractions, you shall be greeted by the following error: \texttt{'add': argument type mismatch: expected int saw '2.200000047683716' of type real}. Here I provided not an integer, but a number containing a fraction, namely \textit{2.2}.
+
+If you instead yearned to use numbers containing fractional components, you would be required to use \textit{real} numbers, for these types of numbers contain both integers and fractions. We shall consider the changes to be made to our current code so that it may accept real numbers shortly; first, let us continue by examining the current code.
+
+Lines 13 through 15 see the implemenation of our function, which shall simply return the sum of both integers it was supplied with.
+
+Lastly, line 19 contains the \texttt{print} statement we have used numerous times before; yet herein, its structure appears to deviate slightly from that which was used priorly, for here it contains two statements instead of the single used previously. As I hope you recall, \texttt{print} may take only a string as its argument and thus, supplying it with an integer directly will yield an error. For example: —
+
+\begin{lstlisting}
+sys->print(add(2, 4));
+\end{lstlisting}
+
+This would return the following error upon compilation: \texttt{'sys->print': argument type mismatch: expected st-\allowbreak ring saw 'add(2, 4)' of type real}. Therefore, if we wish for \texttt{print} to actually print the sum of our addition, we must do thusly: —
+
+\begin{lstlisting}
+sys->print("%d", add(2, 4));
+\end{lstlisting}
+
+Here, the first argument supplied to \texttt{print} is \texttt{"\%d"} which, I assume, stands for \textit{digit}; it is used as a reference to the second argument, namely the execution of our \texttt{add} function. The same was required in our aforementioned \texttt{greet} program, wherein it was written as follows: —
+
+\begin{lstlisting}
+sys->print("%s", greet("Marvin"));
+\end{lstlisting}
+
+Herein, the \texttt{"\%d"} has been replaced by an \texttt{"\%s"} instead, for the \texttt{greet} function does not return an integer, but a string instead. 
+
+Thus, the first argument receives the value of the second argument and, as it is located within a string, \texttt{print} is able to use it. You may append as many argument pairs as you wish, so long as you correctly specify their data type using the \texttt{\%} paramters. Hence, one may combine both the \texttt{greet} and \texttt{add} functions within the \texttt{print} statement as follows: —
+
+\begin{lstlisting}
+sys->print("%d%s", add(2, 4), greet("Marvin"));
+\end{lstlisting}
+
+This would return both the sum of our addition and a text which reads \texttt{"Hello Marvin"}.
 
 \newpage
 \thispagestyle{empty}
@@ -703,9 +739,9 @@ Thus, it is to be remarked, the \texttt{+} operator situated within the \texttt{
 
 I applaud you greatly if you have achieved reading this far and wish to learn even more about this most fascinating operating system. While there do appear to exist quite a number of different manuals, documents, documentation, tutorials etc., the majority of those seem to have been written quite a while ago; and whilst the Inferno community is yet to die — as you hopefully remember from the text itself —, it does not look as if a large amount of scripture is published on this subject. 
 
-Nevertheless, the documents that \textit{do} exist are of great quality and a large number therof have been written by the creators themselves. 
+Nevertheless, the documents that \textit{do} exist are of great quality and a large number therebf have been written by the creators themselves. 
 
-A great book regarding programming with Limbo Phillip Stanley-Marbell's \textsc{Inferno Programming with Limbo} (ISBN 0 470 84352 7). In addition, the renowned Brian W. Kernighan has written a paper on the Limbo programming language titled \textsc{Descent into Limbo}, a copy whereof can be obtained from \textsc{Vita Nuova}'s website under the following link: http://www.vitanuova.com/inferno/papers/descent.html. An archived copy thereof can be found on archive.is under the following URL: https://archive.is/wip/eQJ05.
+A great book regarding programming with Limbo is Phillip Stanley-Marbell's \textsc{Inferno Programming with Limbo} (ISBN 0 470 84352 7). In addition, the renowned Brian W. Kernighan has written a paper on the Limbo programming language titled \textsc{Descent into Limbo}, a copy whereof can be obtained from \textsc{Vita Nuova}'s website under the following link: http://www.vitanuova.com/inferno/papers/descent.html. An archived copy thereof can be found on archive.is under the following URL: https://archive.is/wip/eQJ05.
 
 Additionally, as briefly mentioned at the beginning of the book, \textsc{Vita Nuova} print their own Plan 9 and Inferno manuals, both of which can be ordered on their website.
 
