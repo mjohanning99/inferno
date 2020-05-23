@@ -725,7 +725,22 @@ Withal, it would be possible to convert an integer into a real number by simply 
 sys->print("%f", add(2.2, real 4));
 \end{lstlisting}
 
-In addition to the aforementioned data types, there exists another one titled \texttt{big}, which is, essentially, a regular integer which can hold larger numbers; its value reference code is \texttt{\%bd} which can be remebered as meaning \textit{big digit}.
+In addition to the aforementioned data types, there exists another one titled \texttt{big}, which is, essentially, a regular integer which can hold larger numbers; its value reference code is \texttt{\%bd} which can be remebered as meaning \textit{big digit}. There are, however, even further data types to be found within this lanugage, but we shall be discussing them only when we are required to use them.
+
+Let us now examine a simple way of handling user input via command line arguments, wherewith we may improve our previously created \texttt{greet} program.
+
+\chapter*{Say, what is thy name?}
+  \markboth{Say, what is thy name?}{Say, what is thy name?}
+  \addcontentsline{toc}{chapter}{Say, what is thy name?}
+\epigraph{``The secret of getting things done is to act!''}{\textit{Dante Alighieri}}
+
+We shall now be improving upon our \texttt{greet} program, for the version we created is rather unwieldy; indeed, we are required to edit the source code and thereafter recompile the entirety of the program whenever we wish to alter the name of the person being greeted — truly, a most ineffective way of handling this matter. Instead, it would be much more effective to supply the name of the person whom we wish to greet when running the compiled program and one possible way of doing this is using \textit{command line arguments}.
+
+Command line arguments are commonly seen with programs one is meant to execute from the command line, for they add a convenient way of allowing user input; for example, a command line argument of the Linux \texttt{tar} command would be \texttt{car} — yielding \texttt{tar caf} — wherewith one may create a new tar archive.
+
+Let us hence glance at one possible implementation of a \texttt{greet} program one can supply with a name using a command line argument: —
+
+\lstinputlisting{code-snippets/greet.b}
 
 \newpage
 \thispagestyle{empty}
