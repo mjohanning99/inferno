@@ -697,7 +697,7 @@ This would return the following error upon compilation: \texttt{'sys->print': ar
 sys->print("%d", add(2, 4));
 \end{lstlisting}
 
-Here, the first argument supplied to \texttt{print} is \texttt{"\%d"} which, I assume, stands for \textit{digit}; it is used as a reference to the second argument, namely the execution of our \texttt{add} function. The same was required in our aforementioned \texttt{greet} program, wherein it was written as follows: —
+Here, the first argument supplied to \texttt{print} is \texttt{"\%d"} which, I assume, stands for \textit{digit}; it is used as a reference to the second argument, namely the execution of our \texttt{add} function. Please also note that, henceforth, I shall be calling the \texttt{"\%d"} strings \textit{value reference code}. The same was required in our aforementioned \texttt{greet} program, wherein it was written as follows: —
 
 \begin{lstlisting}
 sys->print("%s", greet("Marvin"));
@@ -712,6 +712,20 @@ sys->print("%d%s", add(2, 4), greet("Marvin"));
 \end{lstlisting}
 
 This would return both the sum of our addition and a text which reads \texttt{"Hello Marvin"}.
+
+If, instead, we longed to create a function which allowed us to add real numbers, we would be required to change the code accordingly: —
+
+\lstinputlisting{code-snippets/plus-function-real.b}
+
+Herein, we altered the data types our function is able to receive from \texttt{int} to \texttt{real}, changed the data type it will return to \texttt{real} and changed the formatting within the \texttt{print} statement to the value reference code \texttt{"\%f"} instead; this, I believe, stands for \textit{floating point number}. Furthermore, we are required to convert all integers — in this example, 4 — to a real number by adding a \textit{.0} behind it. The reason behind this is that henceforth, our function may only accept real numbers; and even though integers are technically part of the real numbers, we must nonetheless supply our function with a number containing a fraction — even if said fraction is zero.
+
+Withal, it would be possible to convert an integer into a real number by simply adding \texttt{real} in front of it; we could thus revise the \texttt{print} statement thusly: —
+
+\begin{lstlisting}
+sys->print("%f", add(2.2, real 4));
+\end{lstlisting}
+
+In addition to the aforementioned data types, there exists another one titled \texttt{big}, which is, essentially, a regular integer which can hold larger numbers; its value reference code is \texttt{\%bd} which can be remebered as meaning \textit{big digit}.
 
 \newpage
 \thispagestyle{empty}
@@ -730,6 +744,7 @@ This would return both the sum of our addition and a text which reads \texttt{"H
 \chapter*{Addendum}
   \markboth{Addendum}{Addendum}
   \addcontentsline{toc}{chapter}{Addendum}
+  A BRIEF WORD ON COMPILING LIMBO PROGRAMS
 
 \newpage
 
