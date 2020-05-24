@@ -742,6 +742,12 @@ Let us hence glance at one possible implementation of a \texttt{greet} program o
 
 \lstinputlisting{code-snippets/greet.b}
 
+As you may have noticed, we are calling upon the help of a library we had not used previously, namely \texttt{arg.m}; this library possesses the code which allows us to easily handle command line arguments. On line 8, just as we were required to do with \texttt{sys.m}, we see the creation of a new variable titled \texttt{arg} of the \texttt{Arg} type, which shall shortly be filled with an instance of the \texttt{Arg} library.
+
+The \texttt{greet} function itself has not been altered and one can copy it verbatim from our previously created greet program.
+
+Lines 22 through 25 contain all the declarations and refernces we are required to use in order for us to be able to properly use the \texttt{arg.m} library, beginning with storing an \texttt{Arg} instance within the priorly made \texttt{arg} variable on line 22.
+
 \newpage
 \thispagestyle{empty}
   \mbox{}
