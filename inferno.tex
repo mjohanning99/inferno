@@ -746,7 +746,22 @@ As you may have noticed, we are calling upon the help of a library we had not us
 
 The \texttt{greet} function itself has not been altered and one can copy it verbatim from our previously created greet program.
 
-Lines 22 through 25 contain all the declarations and refernces we are required to use in order for us to be able to properly use the \texttt{arg.m} library, beginning with storing an \texttt{Arg} instance within the priorly made \texttt{arg} variable on line 22.
+Lines 22 through 25 contain all the declarations and refernces we are required to use in order for us to be able to properly employ the \texttt{arg.m} library, beginning with storing an \texttt{Arg} instance within the priorly made \texttt{arg} variable on line 22. 
+
+Thereafer, on line 24, we execute the \texttt{init} function within the \texttt{Arg} module, to which we supply the \texttt{args} variable, which we have defined within the \texttt{init} function of our current \texttt{greet.b} program. Let us briefly view the \texttt{Arg} module's code: —
+
+\lstinputlisting{code-snippets/arg.m}
+
+The \texttt{init} function herein is rather similar to the one we are using within our greet program, with the sole differences being the omission of the \texttt{ctext} variable and the renaming of \texttt{args} to \texttt{argv}.
+
+Additionally, let us decipher the declaration of the \texttt{args} variable within the \texttt{init} function, for it creates a variable which may store \texttt{list of string}; as we have discussed antecedently, a string's function, in essence, is to store text. Thus if we wished to store a larger number of strings within a list, we can do so by utilising a \texttt{list of string} data type, which allows one to save strings in a numbered list, wherefrom we can retrieve particular entries. The entries stored within the \texttt{args} variable is the data we enter after typing our program's name.
+
+Thus, taking our current greet program as an example, if we typed \texttt{greet Marvin} into the shell, the first argument will be the program itself — namely \texttt{greet} —, whereas the second argument will be \textit{Marvin}. The \texttt{arg} function will thus return the \textit{second} argument of our program and ignore the first argument, or those following the second one. If you wished to retrieve the first argument, the function \texttt{progname} should be used instead. If you wished to retrieve the first argument, the function \texttt{progname} should be used instead.
+
+On line 25, the declaration of the \texttt{input} variable can be found with a rather strange looking sign, namely \texttt{:=}; this is used whenever you wish to write both the declaration of a variable and its functions on one line; in essence, it is the amalgamation of \texttt{:} — used to declare a variable — and \texttt{=} — which one uses to confer a particular value to the variable.
+
+The value we herein assign to it is \texttt{arg->arg()}, id est, the output of the \texttt{arg} function within the \texttt{Arg} module — which, as I hope you recall, outputs the first argument provided following the name of the program itself.
+
 
 \newpage
 \thispagestyle{empty}
