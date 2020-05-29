@@ -760,8 +760,41 @@ Thus, taking our current greet program as an example, if we typed \texttt{greet 
 
 On line 25, the declaration of the \texttt{input} variable can be found with a rather strange looking sign, namely \texttt{:=}; this is used whenever you wish to write both the declaration of a variable and its functions on one line; in essence, it is the amalgamation of \texttt{:} — used to declare a variable — and \texttt{=} — which one uses to confer a particular value to the variable.
 
-The value we herein assign to it is \texttt{arg->arg()}, id est, the output of the \texttt{arg} function within the \texttt{Arg} module — which, as I hope you recall, outputs the first argument provided following the name of the program itself.
+The value we herein assign to it is \texttt{arg->arg()}, id est, the output of the \texttt{arg} function within the \texttt{Arg} module — which, as I hope you recall, outputs the first argument provided following the name of the program itself. 
 
+Then, lastly, line 27 concludes the program by printing the output of the \texttt{greet} function, whom we provide with the user input stored within the \texttt{input} variable. 
+
+However, a large portion of names tend to consist of more than but one word and as our improved \texttt{greet} function only returns the value of merely one of the appended command line arguments, it may not work with scores of different names. Thus, if we wished to work with all affixed arguments, we are required to work with so-called loops. 
+
+\chapter*{In Perpetuum}
+  \markboth{In Perpetuum}{In Perpetuum}
+  \addcontentsline{toc}{chapter}{In Perpetuum}
+\epigraph{``The secret of getting things done is to act!''}{\textit{Dante Alighieri}}
+
+Indeed, loops, as the name may suggest, perform a certain task — that which is placed within them — for a certain duration; one generally assigns said duration to the loop as a mathematical condition, for example: so long as statement \texttt{x} returns the value \texttt{true}, execute the following code. This type of loop is titled a \texttt{while} loop.
+
+In addition to \texttt{while} loops, another type of loop, namely the \texttt{for} loop, is also to be found. Therein you define a variable within the \textit{head} of the function, add a condition and, lastly, provide an operation that is to be conducted upon the priorly defined variable. For example, one may construct a \texttt{for} loop in whose \texttt{head} the variable \texttt{x} is defined as an integer with a value of 0; thereafter specify that the loop is to be run as long as \texttt{x} is less than 10; and thereupon instruct the loop to increment the value of x by 1. This would result in the code placed withing the functions \texttt{body} to be exectued ten times. Such looks thusly in Limbo: —
+
+\lstinputlisting{code-snippets/for_loop.b}
+
+This program would return the numbers 0 through 9 separated by a comma. 
+
+As heretofore discussed, the arguments appended to our program are of the type \texttt{list of string}; this allows us to iterate over each entry, store it in a regular string and print the results — printing lists on their own is, unfortunately, irrealisable. Let us thus improve our greet program even further, by using our newly acquired knowledge of loops so that a user may append more than one name: —
+\lstinputlisting{code-snippets/loop_arg.b}
+
+We shall commence by briefly glancing at line 13 of this program which contains the following line.
+\begin{lstlisting}
+args = tl args;
+\end{lstlisting}
+
+Lists can be addressed using the \texttt{tl} — tail — and \texttt{hd} — head — commands, wherein the \textit{head} returns the first argument as a \texttt{string}, and \textit{tail} returns all other arguments as a \texttt{list of string}. Thus, on this line, we effectively remove the head from the \texttt{args} variable — and, as I hope you remember, since the first argument is the name of the program itself, it is not needed anyhow.
+
+The remaining lines consist of the \texttt{for} loop itself and two \texttt{if} statements, whereof the latter should be simple enough to grasp quickly and we shall thus concentrate on lines 14 and 15 primarily: —
+
+\begin{lstlisting}
+for (s := ""; args != nil; args = tl args)
+  s += " " + hd args;
+\end{lstlisting}
 
 \newpage
 \thispagestyle{empty}
