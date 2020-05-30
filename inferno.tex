@@ -21,10 +21,10 @@
 \usepackage{bold-extra}
 \usepackage{listings}
 \usepackage{xcolor}
-%\usepackage{draftwatermark}
+% \usepackage{draftwatermark}
 \makeindex
 
-% \SetWatermarkText{Draft}
+% \SetWatermarkText{Preview}
 \newlength\longest
 \setlength{\marginparwidth}{0pt}
 \setlength{\headheight}{15pt}
@@ -795,6 +795,10 @@ The remaining lines consist of the \texttt{for} loop itself and two \texttt{if} 
 for (s := ""; args != nil; args = tl args)
   s += " " + hd args;
 \end{lstlisting}
+
+The \texttt{for} loop's initial statement is the declaration of the \texttt{s} variable as an empty string; thereafter follows the condition of \texttt{args} not equalling \texttt{nil}; and lastly the command \texttt{args = tl args} is supposed to be executed, videlicet discarding the head of the \texttt{args} variable; this is to be done until \texttt{args} no longer contains any data — id est when its value has become \texttt{nil}. 
+
+The successive line then attaches a space — \texttt{" "} — onto the \texttt{s} variable, plucks the head from the \texttt{args} variable and, lastly, adjoins it to the \texttt{s} variable; thereupon the loop is executed again, yet this time, the \texttt{args} variable has had one of its arguments expunged.
 
 \newpage
 \thispagestyle{empty}
