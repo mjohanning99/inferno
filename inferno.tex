@@ -309,7 +309,7 @@ Finally, the time has come for us to install Inferno; the final command that wil
 
   Undoubtedly proud of their previous achievements, they decided to implement — a wise decision, might I add — a large number of the commands that are to be found in Unix-based systems in Inferno. Yet you should not let yourself get fooled, for this is not Unix — 'tis merely hell hiding in plain sight; and whilst it is indeed possible to use Inferno from its shell only, it does provide a window manager; for, as I hope you remember, they longed to create an operating system that was built with a window manager in mind and not have it be, as was the case with Unix, an afterthought, carelessly plastered onto it years later.
 
-  Its window manager — simply and rather uncreatively titled \texttt{wm} — can be evoked by typing \texttt{wm/wm}, whereupon one will be greeted by a small window; indeed, its appearance is somewhat dull, consisting of a grey background, and a grey task bar — truly an atrocity to behold. Indeed, it is puzzling, for what is to be done? What is to be clicked? Whence can programs be started and wherefrom is a poor fellow supposed to receive help? Having been tossed down into this abysmal realm of dread, one is reminded of what, in his book Paradise Lost, John Milton writes: —
+	Its window manager — simply and rather uncreatively titled \texttt{wm} — can be evoked by typing \texttt{wm/wm}, whereupon one will be greeted by a small window; indeed, its appearance is somewhat dull, consisting of a grey background, and a grey task bar — truly an atrocity to behold. Indeed, it is puzzling, for what is to be done? What is to be clicked? Whence can programs be started and wherefrom is a poor fellow supposed to receive help? Having been tossed down into this abysmal realm of dread, one is reminded of what, in his book Paradise Lost, John Milton writes: —
 
   \begin{quote}
     Seest thou yon dreary plain, forlorn and wild, \\
@@ -348,7 +348,7 @@ Finally, the time has come for us to install Inferno; the final command that wil
 
   \epigraph{``O how unlike the place from whence they fell!''}{\textit{John Milton\\Paradise Lost, Book I}}
 
-  Upon having finally entered and briefly explored Inferno, we shall now begin our more thorough investigations of which kinds of utensils are available to us of which there appear to be numerous. In the following section we shall explore these in brief, for most of them are meagerly equipped with functions; yet there do exist a few that are able to do much and we shall thus look at these in more detail.
+  Upon having finally entered and briefly explored Inferno, we shall now begin our more thorough investigations of which kinds of utensils are available to us of which there appear to be numerous. In the following section we shall explore these in brief, for most of them are meagrely equipped with functions; yet there do exist a few that are able to do much and we shall thus look at these in more detail.
 
   I also provide you with photographs of these programs frequently.
 
@@ -386,7 +386,7 @@ Finally, the time has come for us to install Inferno; the final command that wil
 
   Indeed, having done so appears to have tempered him who dwells below the surface of Inferno, for Files opens without errors; why, it finally allows us to click folders to open them at inspect their contents freely and without being disturbed.
 
-  But withal, one may now ask oneself, has what I have just done really been the correct way? Surely, one should be able to log in as a different user; yet, unfortunately, I have been unable to ascertain how that is possible, for the manual page of \texttt{wm} proved to be of but meager help. There seems to exist a command titled \texttt{logon} which, if used with \texttt{wm}, is supposed to provide a screen whereon a user can login; but alas, I have been unable to get it working.
+  But withal, one may now ask oneself, has what I have just done really been the correct way? Surely, one should be able to log in as a different user; yet, unfortunately, I have been unable to ascertain how that is possible, for the manual page of \texttt{wm} proved to be of but meagre help. There seems to exist a command titled \texttt{logon} which, if used with \texttt{wm}, is supposed to provide a screen whereon a user can login; but alas, I have been unable to get it working.
 
   \begin{wrapfigure}{R}{0.55\textwidth}
     \centering
@@ -430,7 +430,7 @@ Finally, the time has come for us to install Inferno; the final command that wil
 
     I must confess that I indeed do know of Limbo and its purpose; for it is the language wherein one is supposed to write programs for Inferno, to extent its reach into the world and to expand upon its existing functions. But alas, 'tis a subject much too advanced for us at this stage, for barely do we even know Inferno's core functions; how are we, then, to write programs for it? Fear not of missing out, for we shall examine Limbo, but first we must understand Inferno's inner works; only having done thusly shall we be aptly qualified to use Limbo.
 
-    Yon program, which reminds one of those used in bygone days, truly appears to be but a meager editor and whereof not much can be said — it does, indeed, enable one to edit files, but this is all it is able to accomplish.
+    Yon program, which reminds one of those used in bygone days, truly appears to be but a meagre editor and whereof not much can be said — it does, indeed, enable one to edit files, but this is all it is able to accomplish.
 
     \section*{Acme}
       \markboth{Acme}{Acme}
@@ -799,6 +799,7 @@ for (s := ""; args != nil; args = tl args)
 The \texttt{for} loop's initial statement is the declaration of the \texttt{s} variable as an empty string; thereafter follows the condition of \texttt{args} not equalling \texttt{nil}; and lastly the command \texttt{args = tl args} is supposed to be executed, videlicet discarding the head of the \texttt{args} variable; this is to be done until \texttt{args} no longer contains any data — id est when its value has become \texttt{nil}. 
 
 The successive line then attaches a space — \texttt{" "} — onto the \texttt{s} variable, plucks the head from the \texttt{args} variable and, lastly, adjoins it to the \texttt{s} variable; thereupon the loop is executed again, yet this time, the \texttt{args} variable has had one of its arguments expunged.
+\texttt{Hallo}
 
 \newpage
 \thispagestyle{empty}
