@@ -1,4 +1,5 @@
 # greet.b
+
 implement GreetImproved;
 
 include "arg.m";
